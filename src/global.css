@@ -1,0 +1,16 @@
+:root {
+	--color-site-bg: #fbfaf6;
+	--color-plasma-40: #f1edfa;
+	--color-plasma-100: #6545a9;
+}
+
+body {
+	background-color: var(--color-site-bg, #fbfaf6);
+}
+
+.container {
+	max-width: 62rem;
+	margin: 0 auto;
+	min-width: 320px;
+	padding: 0 2rem;
+}
