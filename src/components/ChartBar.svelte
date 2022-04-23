@@ -9,12 +9,12 @@
 	$: data = config.data;
 
 	const filter = (name) => () => {
-		$session.filters = [[`${field_name} == "${name}"`]];
+		$session.filters = [[`"${name}" in ${field_name}`]];
 	};
 </script>
 
 <ul class="bar-container">
-	{#each Object.entries(data) as [name, value], i (i)}
+	{#each Object.entries(data).sort(([_,a], [__,b]) => b.percent - a.percent) as [name, value], i (i)}
 		<li class="bar-item" style="--js-value:{value.percent}%">
 			<div class="bar-group">
 				<div class="bar-label">
@@ -42,9 +42,8 @@
 
 <style>
 	.bar-container {
-		margin: 0;
+		margin: 2rem 0;
 		padding: 0;
-		margin-bottom: 1rem;
 		list-style-type: none;
 	}
 
@@ -67,7 +66,7 @@
 		position: relative;
 		width: 100%;
 		height: 1.125rem;
-		background-color: var(--color-chart-bar-bg, #ececec);
+		background-color: var(--color-chart-bar-bg);
 	}
 
 	.bar-fg {
@@ -78,8 +77,8 @@
 		height: 100%;
 		transform-origin: center left;
 		transform: scaleX(var(--js-value, 0.1%));
-		background-color: var(--color-chart-bar-fg, #ccc);
-		transition: transform .3s ease;
+		background-color: var(--color-chart-bar-fg);
+		transition: transform 0.3s ease;
 	}
 
 	.bar-name {

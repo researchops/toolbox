@@ -2,10 +2,16 @@
 	--color-site-bg: #fbfaf6;
 	--color-plasma-40: #f1edfa;
 	--color-plasma-100: #6545a9;
+	--color-chart-bar-fg: #ccc;
+	--color-chart-bar-bg: #ececec;
 }
 
 body {
 	background-color: var(--color-site-bg, #fbfaf6);
+}
+
+main p {
+	margin: 0;
 }
 
 .container {

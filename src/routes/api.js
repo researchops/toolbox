@@ -18,14 +18,22 @@ export async function post({ request }) {
 			return {
 				field_name,
 				data: transform(raw),
-                unit,
+				unit
 			};
 		});
 		const data = await Promise.all(tasks);
+		let result = {};
+
+		chart_ids.forEach((id, i) => {
+			result[id] = data[i];
+		});
+
 		return {
-			body: data
+			// @ts-expect-error
+			body: result
 		};
 	} catch (err) {
+		console.error(err)
 		return {
 			status: 500
 		};

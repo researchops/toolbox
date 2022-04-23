@@ -1,0 +1,60 @@
+---
+title: Participant Info
+---
+
+<script context="module">
+	/** @type {import('@sveltejs/kit').Load} */
+	export async function load({ fetch, session }) {
+		const res = await fetch('/api', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				filters: session.filters || [],
+				chart_ids: ['expertise', 'project_management']
+			})
+		});
+
+		const data = await res.json();
+
+		return {
+			status: res.status,
+			props: {
+				data
+			}
+		};
+	}
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+
+    $: chart_expertise = data.expertise
+    $: project_management = data.project_management
+
+</script>
+
+# Participant Info
+
+## Discipline
+
+Our survey respondents mostly described their areas of expertise
+
+<ChartBar config={chart_expertise} filterable />
+
+<Note>
+
+Those participants who **selected** User researcher of design researcher described their role as one that was ancecdotally like _something_ we did not expect. This indicates that job roles within the industry may be changing in this certain way.
+
+</Note>
+
+---
+
+## Project Management
+Management of multiple UX research projects
+
+<ChartBar config={project_management} filterable />
