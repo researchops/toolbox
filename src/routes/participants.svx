@@ -12,7 +12,7 @@ title: Participant Info
 			},
 			body: JSON.stringify({
 				filters: session.filters || [],
-				chart_ids: ['expertise', 'project_management']
+				chart_ids: ['expertise', 'experience', 'company_type', 'industry', 'maturity', 'project_management']
 			})
 		});
 
@@ -34,6 +34,10 @@ title: Participant Info
 	export let data;
 
     $: chart_expertise = data.expertise
+    $: experience = data.experience
+    $: company_type = data.company_type
+    $: maturity = data.maturity
+    $: industry = data.industry
     $: project_management = data.project_management
 
 </script>
@@ -54,7 +58,36 @@ Those participants who **selected** User researcher of design researcher describ
 
 ---
 
+## Experience
+
+Our survey respondents mostly described their areas of expertise
+
+<ChartBar config={experience} filterable />
+
+---
+
+# Company Info
+
+## Company Type
+
+<ChartBar config={company_type} filterable />
+
+---
+
+## Industry
+
+<ChartBar config={industry} filterable />
+
+---
+
+## Maturity
+
+<ChartBar config={maturity} filterable />
+
+---
+
 ## Project Management
+
 Management of multiple UX research projects
 
 <ChartBar config={project_management} filterable />

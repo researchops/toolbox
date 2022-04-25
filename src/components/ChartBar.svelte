@@ -1,5 +1,5 @@
 <script>
-	import { session } from '$app/stores';
+	import * as filter from '~/filters'
 
 	export let config;
 	export let filterable = false;
@@ -8,8 +8,8 @@
 	$: unit = config.unit;
 	$: data = config.data;
 
-	const filter = (name) => () => {
-		$session.filters = [[`"${name}" in ${field_name}`]];
+	const handle_filter = (value) => () => {
+		filter.add({ field_name, value })
 	};
 </script>
 
@@ -32,7 +32,7 @@
 				</div>
 			</div>
 			{#if filterable}
-				<button class="bar-filter" on:click={filter(name)}
+				<button class="bar-filter" on:click={handle_filter(name)}
 					>Filter</button
 				>
 			{/if}

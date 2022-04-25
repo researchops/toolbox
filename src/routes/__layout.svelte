@@ -4,10 +4,11 @@
     import '~/global.css';
 </script>
 
-<FilterBar />
 <div class="container">
 	<slot />
 </div>
+
+<FilterBar />
 
 <style>
 </style>
