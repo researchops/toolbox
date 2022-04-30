@@ -14,7 +14,7 @@ export async function post({ request }) {
 	const body = await request.json();
 	const { chart_ids, filters } = body;
 
-	const dataset = await fetch('/data.json').then((res) => res.json());
+	const dataset = await fetch('https://toolbox-8w7.pages.dev/data.json').then((res) => res.json());
 
 	const q_filter = filters
 		.map((_filter) => assemble_filter(_filter))
