@@ -1,6 +1,6 @@
-import path from 'node:path';
-import { createRequire } from 'node:module';
-import { fileURLToPath } from 'node:url';
+import path from 'path';
+import { createRequire } from 'module';
+import { fileURLToPath } from 'url';
 import { evaluate, parse } from 'groq-js';
 
 const require = createRequire(import.meta.url);
