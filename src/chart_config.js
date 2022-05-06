@@ -46,7 +46,6 @@ const group_in = (data) => {
 
 export default {
 	expertise: {
-		field_name: 'expertise',
 		unit: 'census participants',
 		filter: {
 			type: 'equal'
@@ -54,7 +53,6 @@ export default {
 		transform: group
 	},
 	experience: {
-		field_name: 'experience',
 		unit: 'census participants',
 		filter: {
 			type: 'equal'
@@ -62,7 +60,6 @@ export default {
 		transform: group
 	},
 	company_type: {
-		field_name: 'company_type',
 		unit: 'companies',
 		filter: {
 			type: 'equal'
@@ -70,7 +67,6 @@ export default {
 		transform: group
 	},
 	industry: {
-		field_name: 'industry',
 		unit: 'companies',
 		filter: {
 			type: 'in'
@@ -78,7 +74,6 @@ export default {
 		transform: group_in
 	},
 	maturity: {
-		field_name: 'maturity',
 		unit: 'companies',
 		filter: {
 			type: 'equal'
@@ -86,11 +81,14 @@ export default {
 		transform: group
 	},
 	project_management: {
-		field_name: 'project_management',
 		unit: 'census participants',
 		filter: {
 			type: 'in'
 		},
+		transform: group_in
+	},
+	responsibilities: {
+		field_type: 'multichoice',
 		transform: group_in
 	}
 };

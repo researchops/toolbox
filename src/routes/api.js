@@ -31,15 +31,15 @@ export async function post({ request }) {
 
 	try {
 		const tasks = chart_ids.map(async (id) => {
-			const { field_name, transform, unit } = chart_config[id];
+			const { transform, unit = 'census participants' } = chart_config[id];
 			const result = await query(
 				dataset,
-				`*[${q_filter}] { "field": ${field_name} }`
+				`*[${q_filter}] { "field": ${id} }`
 			);
 			const raw = await result.get();
 
 			return {
-				field_name,
+				field_name: id,
 				data: transform(raw),
 				unit
 			};
