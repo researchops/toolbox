@@ -28,7 +28,7 @@ theme: ocean
 
 A UX research roadmap is a plan that defines your team's key research goals and the strategy to reach them. It shows a timeline for the studies that will be conducted during the year to achieve those research goals.
 
-<ChartBar config={roadmapping} />
+<ChartBar config={roadmapping} filterable />
 
 ---
 
@@ -36,7 +36,7 @@ A UX research roadmap is a plan that defines your team's key research goals and 
 
 A research plan is a document that sets expectations and highlights the most important information you need to communicate with stakeholders in a specific research project. It is usually a collaboration between all stakeholders to ensure it meets the goals and objectives you've laid out.
 
-<ChartBar config={planning} />
+<ChartBar config={planning} filterable />
 
 ---
 
@@ -44,7 +44,7 @@ A research plan is a document that sets expectations and highlights the most imp
 
 Management of multiple UX research projects
 
-<ChartBar config={project_management} />
+<ChartBar config={project_management} filterable />
 
 ---
 
@@ -52,4 +52,4 @@ Management of multiple UX research projects
 
 Tracking the impact of research findings/issues to address
 
-<ChartBar config={issue_tracking} />
+<ChartBar config={issue_tracking} filterable />

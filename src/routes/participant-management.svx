@@ -1,0 +1,60 @@
+---
+title: Recruiting & Participant Management
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['participant_recruiting', 'participant_contacting', 'participant_tracking',  'informed_consent', 'participant_incentives', 'participant_relationship_mngt', 'intercept'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+	import Chunky from '~/components/Chunky.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+
+</script>
+
+# Recruiting & Participant Management
+
+## Recruiting
+
+<ChartBar config={data.participant_recruiting} filterable />
+
+---
+
+## Contacting
+
+<ChartBar config={data.participant_contacting} filterable />
+
+---
+
+## Tracking
+
+<ChartBar config={data.participant_tracking} filterable />
+
+---
+
+## Consent
+
+<ChartBar config={data.informed_consent} filterable />
+
+---
+
+## Incentives
+
+<ChartBar config={data.participant_incentives} filterable />
+
+---
+
+## Manage Relationship
+
+<ChartBar config={data.participant_relationship_mngt} filterable />
+
+---
+
+## Intercept
+
+<ChartBar config={data.intercept} filterable />

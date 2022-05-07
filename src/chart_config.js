@@ -128,5 +128,47 @@ export default {
 			type: 'in'
 		},
 		transform: group_in
+	},
+	participant_recruiting: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	participant_contacting: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	participant_tracking: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	participant_incentives: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	informed_consent: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	participant_relationship_mngt: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	intercept: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
 	}
 };

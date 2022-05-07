@@ -9,6 +9,11 @@
 			id: '3',
 			path: '/tools-operations-planning',
 			label: 'Operations and planning'
+		},
+		{
+			id: '4',
+			path: '/participant-management',
+			label: 'Recruiting & Participant Management'
 		}
 	];
 

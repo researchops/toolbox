@@ -39,19 +39,19 @@ title: Industry Info
 
 ## Location
 
-<ChartBar config={research_countries_from} />
+<ChartBar config={research_countries_from} filterable />
 
 ---
 
 ## Where research is conducted
 
-<ChartBar config={research_countries_in} />
+<ChartBar config={research_countries_in} filterable />
 
 ---
 
 ## Research team size
 
-<ChartBar config={researcher_count} />
+<ChartBar config={researcher_count} filterable />
 
 ---
 
