@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 
 	const navs = [
-		{ id: '0', path: '#', label: 'Welcome' },
+		{ id: '0', path: '/', label: 'Welcome' },
 		{ id: '1', path: '/participants', label: 'Participant info' },
 		{ id: '2', path: '/industry-info', label: 'Industry Info' }
 	];
