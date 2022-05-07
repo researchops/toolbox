@@ -5,6 +5,7 @@
 	export let config;
 	export let filterable = false;
 	export let sort_type = 'popularity';
+	export let limit = 2;
 
 	$: field_name = config.field_name;
 	$: unit = config.unit;
@@ -26,9 +27,13 @@
 			class:active={sort_type === 'popularity'}
 			on:click={() => (sort_type = 'popularity')}>Popularity</button
 		>
+		<div>
+			<label for="input-limit">Limit</label>
+			<input class="input-limit" id="input-limit" type="number" bind:value={limit}>
+		</div>
 	</div>
 	<ul class="bar-list-container">
-		{#each Object.entries(data).sort(sorter) as [name, value], i (i)}
+		{#each Object.entries(data).filter(([_, value]) => value.percent >= limit).sort(sorter) as [name, value], i (i)}
 			<li class="bar-item" style="--js-value:{value.percent}%">
 				<div class="bar-group">
 					<div class="bar-label">
@@ -53,6 +58,12 @@
 			</li>
 		{/each}
 	</ul>
+
+	{#if limit > 0}
+		<small>
+			Data below {limit}% are not shown.
+		</small>
+	{/if}
 </div>
 
 <style>
@@ -106,6 +117,16 @@
 
 	.bar-filter {
 		padding: 0.5rem;
+	}
+
+	.button-groups {
+		display: flex;
+		gap: 0.25rem;
+		align-items: center;
+	}
+
+	.input-limit {
+		width: 48px;
 	}
 
 	.button-groups button {
