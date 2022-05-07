@@ -4,7 +4,12 @@
 	const navs = [
 		{ id: '0', path: '/', label: 'Welcome' },
 		{ id: '1', path: '/participants', label: 'Participant info' },
-		{ id: '2', path: '/industry-info', label: 'Industry Info' }
+		{ id: '2', path: '/industry-info', label: 'Industry info' },
+		{
+			id: '3',
+			path: '/tools-operations-planning',
+			label: 'Operations and planning'
+		}
 	];
 
 	$: current_page = $page.url.pathname;
@@ -29,7 +34,7 @@
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
-        margin-top: 1.25rem;
+		margin-top: 1.25rem;
 	}
 
 	.nav-item {
@@ -37,8 +42,8 @@
 	}
 
 	.nav-item a {
-        display: block;
-        color: currentColor;
+		display: block;
+		color: currentColor;
 		padding: 0.5rem 1rem 0.75rem;
 		text-decoration: none;
 		font-size: 1.125rem;

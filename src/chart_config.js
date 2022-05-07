@@ -110,5 +110,23 @@ export default {
 			type: 'in'
 		},
 		transform: group_in
+	},
+	roadmapping: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	planning: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	issue_tracking: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
 	}
 };
