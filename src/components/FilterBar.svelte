@@ -10,7 +10,7 @@
 
 {#if Array.isArray($session.filters) && $session.filters.length > 0}
 	<div transition:fly={{ y: 20 }} class="container filter-container">
-		{#each $session.filters as { field_name, value }, i (i + field_name + value)}
+		{#each $session.filters as { field_name, value }, i (field_name + value)}
 			<FilterPill on:click={handle_remove_filter({ field_name, value })}>
 				{value}
 			</FilterPill>

@@ -19,18 +19,18 @@ const group_in = (data) => {
 	let total = data.length;
 
 	const grouped = data.reduce((acc, cur) => {
-		const { field } = cur
-		if (!field) return acc
+		const { field } = cur;
+		if (!field) return acc;
 
-		field.forEach(value => {
+		field.forEach((value) => {
 			if (acc[value] == undefined) {
-				acc[value] = 1
+				acc[value] = 1;
 			} else {
-				acc[value] += 1
+				acc[value] += 1;
 			}
-		})
-		return acc
-	}, {})
+		});
+		return acc;
+	}, {});
 
 	let result = {};
 	for (let key in grouped) {
@@ -88,7 +88,27 @@ export default {
 		transform: group_in
 	},
 	responsibilities: {
-		field_type: 'multichoice',
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	researcher_count: {
+		filter: {
+			type: 'equal'
+		},
+		transform: group
+	},
+	research_countries_from: {
+		filter: {
+			type: 'in'
+		},
+		transform: group_in
+	},
+	research_countries_in: {
+		filter: {
+			type: 'in'
+		},
 		transform: group_in
 	}
 };

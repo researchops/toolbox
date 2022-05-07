@@ -9,7 +9,13 @@ const init = ($session) => {
 const add = (config) =>
 	session.update(($session) => {
 		init($session);
-		$session.filters.push(config);
+		const idx = $session.filters.findIndex(
+			(f) =>
+				config.field_name === f.field_name && config.value === f.value
+		);
+		if (idx < 0) {
+			$session.filters.push(config);
+		}
 		return $session;
 	});
 

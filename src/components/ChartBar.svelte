@@ -63,6 +63,7 @@
 	.bar-list-container {
 		padding: 0;
 		list-style-type: none;
+		font-size: 0.875rem;
 	}
 
 	.bar-item {

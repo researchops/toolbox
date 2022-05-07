@@ -3,28 +3,8 @@ title: Participant Info
 ---
 
 <script context="module">
-	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ fetch, session }) {
-		const res = await fetch('/api', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				filters: session.filters || [],
-				chart_ids: ['expertise', 'experience', 'responsibilities' ,'company_type', 'industry', 'maturity', 'project_management']
-			})
-		});
-
-		const data = await res.json();
-
-		return {
-			status: res.status,
-			props: {
-				data
-			}
-		};
-	}
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['expertise', 'experience', 'responsibilities'])
 </script>
 
 <script>
@@ -34,12 +14,8 @@ title: Participant Info
 
 	export let data;
 
-    $: chart_expertise = data.expertise
+    $: expertise = data.expertise
     $: experience = data.experience
-    $: company_type = data.company_type
-    $: maturity = data.maturity
-    $: industry = data.industry
-    $: project_management = data.project_management
 	$: responsibilities = data.responsibilities
 
 </script>
@@ -50,7 +26,7 @@ title: Participant Info
 
 Our survey respondents mostly described their areas of expertise
 
-<ChartBar config={chart_expertise} filterable />
+<ChartBar config={expertise} filterable />
 
 <Note>
 
@@ -71,31 +47,3 @@ Our survey respondents mostly described their areas of expertise
 ## Responsibilities
 
 <Chunky config={responsibilities} />
-
----
-
-# Company Info
-
-## Company Type
-
-<ChartBar config={company_type} filterable />
-
----
-
-## Industry
-
-<ChartBar config={industry} filterable />
-
----
-
-## Maturity
-
-<ChartBar config={maturity} filterable />
-
----
-
-## Project Management
-
-Management of multiple UX research projects
-
-<ChartBar config={project_management} filterable />

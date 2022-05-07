@@ -1,0 +1,61 @@
+---
+title: Industry Info
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['industry', 'company_type', 'research_countries_from', 'research_countries_in', 'researcher_count', 'maturity'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+	import Chunky from '~/components/Chunky.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+
+    $: industry = data.industry
+    $: company_type = data.company_type
+    $: research_countries_from = data.research_countries_from
+    $: research_countries_in = data.research_countries_in
+    $: researcher_count = data.researcher_count
+    $: maturity = data.maturity
+
+</script>
+
+# Industry Information
+
+## Industry
+
+<ChartBar config={industry} filterable />
+
+---
+
+## Company Type
+
+<ChartBar config={company_type} filterable />
+
+---
+
+## Location
+
+<ChartBar config={research_countries_from} />
+
+---
+
+## Where research is conducted
+
+<ChartBar config={research_countries_in} />
+
+---
+
+## Research team size
+
+<ChartBar config={researcher_count} />
+
+---
+
+## Maturity
+
+<ChartBar config={maturity} filterable />
