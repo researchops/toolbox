@@ -1,6 +1,7 @@
 <script>
 	import * as filter from '~/filters';
 	import { sort_helpers } from './chart-bar-utils';
+	import { session } from '$app/stores';
 
 	export let config;
 	export let filterable = false;
@@ -10,7 +11,9 @@
 	$: field_name = config.field_name;
 	$: unit = config.unit;
 	$: data = config.data;
+	$: completion_percentage = config.completion_percentage;
 	$: sorter = sort_helpers[sort_type];
+	$: filter_applied = $session.filters.length > 0;
 
 	const handle_filter = (value) => () => {
 		filter.add({ field_name, value });
@@ -29,11 +32,18 @@
 		>
 		<div>
 			<label for="input-limit">Limit</label>
-			<input class="input-limit" id="input-limit" type="number" bind:value={limit}>
+			<input
+				class="input-limit"
+				id="input-limit"
+				type="number"
+				bind:value={limit}
+			/>
 		</div>
 	</div>
 	<ul class="bar-list-container">
-		{#each Object.entries(data).filter(([_, value]) => value.percent >= limit).sort(sorter) as [name, value], i (i)}
+		{#each Object.entries(data)
+			.filter(([_, value]) => value.percent >= limit)
+			.sort(sorter) as [name, value], i (i)}
 			<li class="bar-item" style="--js-value:{value.percent}%">
 				<div class="bar-group">
 					<div class="bar-label">
@@ -63,6 +73,11 @@
 		<small>
 			Data below {limit}% are not shown.
 		</small>
+	{/if}
+	{#if !filter_applied}
+		<small
+			>{completion_percentage}% of participants answered this question.</small
+		>
 	{/if}
 </div>
 

@@ -10,6 +10,18 @@ function assemble_filter({ field_name, value }) {
 	}  ${field_name}`;
 }
 
+function remove_empties(data) {
+	return data.filter(({ field }) => {
+		if (Array.isArray(field)) {
+			return (
+				field.length > 0 && !field.every((item) => item.trim() === '')
+			);
+		} else {
+			return field !== null;
+		}
+	});
+}
+
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function post({ request }) {
 	const body = await request.json();
@@ -17,11 +29,11 @@ export async function post({ request }) {
 
 	let dataset;
 	if (mode === 'production') {
-		dataset = await fetch(
-			'https://toolbox-8w7.pages.dev/data.json'
-		).then((res) => res.json());
+		dataset = await fetch('https://toolbox-8w7.pages.dev/data.json').then(
+			(res) => res.json()
+		);
 	} else {
-		dataset = await import('~/data/data-loader').then(res => res.default);
+		dataset = await import('~/data/data-loader').then((res) => res.default);
 	}
 
 	const q_filter = filters
@@ -31,17 +43,22 @@ export async function post({ request }) {
 
 	try {
 		const tasks = chart_ids.map(async (id) => {
-			const { transform, unit = 'census participants' } = chart_config[id];
+			const { transform, unit = 'census participants' } =
+				chart_config[id];
 			const result = await query(
 				dataset,
 				`*[${q_filter}] { "field": ${id} }`
 			);
 			const raw = await result.get();
+			const cleaned = remove_empties(raw);
+			const transformed = transform(cleaned);
 
 			return {
 				field_name: id,
-				data: transform(raw),
-				unit
+				data: transformed,
+				unit,
+				completion_percentage:
+					Math.round((cleaned.length / raw.length) * 10000) / 100
 			};
 		});
 		const data = await Promise.all(tasks);
