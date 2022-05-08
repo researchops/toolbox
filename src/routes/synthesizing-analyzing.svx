@@ -1,0 +1,48 @@
+---
+title: Synthesizing & Analyzing
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['transcription', 'text_tagging', 'note_taking', 'session_recording', 'video_editing'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+</script>
+
+# Synthesizing & Analyzing
+
+## Transcription
+
+<ChartBar config={data.transcription} />
+
+---
+
+## Text Tagging
+
+<ChartBar config={data.text_tagging} />
+
+---
+
+## Note Taking
+
+<ChartBar config={data.note_taking} />
+
+---
+
+## Session Recording
+
+<ChartBar config={data.session_recording} />
+
+---
+
+## Video Editing
+
+<ChartBar config={data.video_editing} />
+
+---

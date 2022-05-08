@@ -1,0 +1,72 @@
+---
+title: Analytics
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['path_analysis', 'sentiment_analysis', 'heat_maps', 'eye_tracking', 'ab_testing', 'search_log_analysis'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+</script>
+
+# Analytics
+
+## Path analysis
+
+A user path (also known as ‘user flow’) is a visual representation of what happens when people use your website or app. Often used to find areas where users bounce/drop from the app/website
+
+<ChartBar config={data.path_analysis} />
+
+---
+
+## Sentiment analysis
+
+A Sentiment Score Chart is an approach to quantify and visualize qualitative data. It provides a means to understand the emotions users shared during qualitative feedback sessions, or open-ended responses on a survey. By segmenting out these areas in a polarized histogram, team members can more easily identify the positive and negative portions of their product.
+
+<ChartBar config={data.sentiment_analysis} />
+
+---
+
+## Heatmaps
+
+A heat map is a data visualization that shows how website users click, scroll, and move on the page. The 'heat' part of the name comes from the color scale: red depicts popular (hot) areas of the page, and blue less popular (cold) areas.
+
+<ChartBar config={data.heat_maps} />
+
+<Note>
+Our participants are very divided about the ease of use and robust functionality of project management tools. They want to be able to use the same systems that their business and development partners use – but also want to be able to let design and research employees use more user friendly and lightweight tooling.
+
+If you would like to see more information some of this sentiment is available in the data download.   
+</Note>
+
+---
+
+## Eye tracking
+
+Eye tracking is a technology that measures eye movements and makes it possible to know where a person is looking, what they are looking at, and for how long their gaze is in a particular spot.
+
+<ChartBar config={data.eye_tracking} />
+
+---
+
+## A/B testing
+
+A technique of showing two or more variants of a design to users at random to find out which one performs bettert
+
+<ChartBar config={data.ab_testing} />
+
+---
+
+## Search-log analysis
+
+Your website’s search engine can tell you what your web visitors want, how they look for it, and how well your content strategy meets their needs.
+
+<ChartBar config={data.search_log_analysis} />
+
+---

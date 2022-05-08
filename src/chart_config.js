@@ -65,4 +65,7 @@ export const chart_config = {
 	researcher_count: {
 		type: 'single'
 	},
+	business: {
+		type: 'single'
+	},
 };

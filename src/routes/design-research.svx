@@ -1,0 +1,78 @@
+---
+title: Design research
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['concept_testing', 'card_sorting', 'tree_testing', 'first_click_testing', 'task_analysis', 'ux_benchmarking', 'unmoderated_usability_testing', 'accessibility_evaluation', 'competitive_analysis', 'heuristic_evaluations'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+</script>
+
+# Design research
+
+## Concept testing
+
+<ChartBar config={data.concept_testing} />
+
+---
+
+## Card sorting
+
+<ChartBar config={data.card_sorting} />
+
+---
+
+## Tree testing
+
+<ChartBar config={data.tree_testing} />
+
+---
+
+## First click testing
+
+<ChartBar config={data.first_click_testing} />
+
+---
+
+## Task analysis
+
+<ChartBar config={data.task_analysis} />
+
+---
+
+## UX benchmarking
+
+<ChartBar config={data.ux_benchmarking} />
+
+---
+
+## Usability tTesting
+
+<ChartBar config={data.unmoderated_usability_testing} />
+
+---
+
+## Accessibility evaluation
+
+<ChartBar config={data.accessibility_evaluation} />
+
+---
+
+## Competitive analysis
+
+<ChartBar config={data.competitive_analysis} />
+
+---
+
+## Heuristic evaluations
+
+<ChartBar config={data.heuristic_evaluations} />
+
+---

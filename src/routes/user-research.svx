@@ -1,0 +1,48 @@
+---
+title: User Research
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['moderated_usability_testing', 'surveys', 'interviews', 'diary_studies', 'focus_groups'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+</script>
+
+# User Research
+
+## Moderated Prototype Testing
+
+<ChartBar config={data.moderated_usability_testing} />
+
+---
+
+## Surveys
+
+<ChartBar config={data.surveys} />
+
+---
+
+## Interviews
+
+<ChartBar config={data.interviews} />
+
+---
+
+## Diary Studies
+
+<ChartBar config={data.diary_studies} />
+
+---
+
+## Focus Groups
+
+<ChartBar config={data.focus_groups} />
+
+---

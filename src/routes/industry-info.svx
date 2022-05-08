@@ -4,7 +4,7 @@ title: Industry Info
 
 <script context="module">
 	import { create_loader } from '~/components/page-loader'
-	export const load = create_loader(['industry', 'company_type', 'research_countries_from', 'research_countries_in', 'researcher_count', 'maturity'])
+	export const load = create_loader(['business', 'industry', 'company_type', 'research_countries_from', 'research_countries_in', 'researcher_count', 'maturity'])
 </script>
 
 <script>
@@ -20,10 +20,16 @@ title: Industry Info
     $: research_countries_in = data.research_countries_in
     $: researcher_count = data.researcher_count
     $: maturity = data.maturity
+    $: business = data.business
 
 </script>
 
 # Industry Information
+
+## Business
+
+<ChartBar config={business} filterable />
+
 
 ## Industry
 
