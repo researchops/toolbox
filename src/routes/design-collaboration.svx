@@ -1,0 +1,74 @@
+---
+title: Design & collaboration
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['collaborative_brainstorming', 'diagramming_mapping', 'participatory_design', 'creating_wireframes', 'mockups', 'prototyping'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+</script>
+
+# Design & collaboration
+
+## Collaborative brainstorming
+
+For brainstorming and collaboration work (virtual and/or in person)
+
+<ChartBar config={data.collaborative_brainstorming} />
+
+---
+
+## Diagramming and mapping
+
+Creating diagrams and maps (workflows, journey maps, entity diagrams, etc.)
+
+<ChartBar config={data.diagramming_mapping} />
+
+---
+
+## Participatory design
+
+An approach to design that invites all stakeholders (e.g. customers, employees, partners, citizens, consumers) into the design process as a means of better understanding, meeting, and sometimes preempting their needs.
+
+<ChartBar config={data.participatory_design} />
+
+<Note>
+
+Our participants are very divided about the ease of use and robust functionality of project management tools. They want to be able to use the same systems that their business and development partners use – but also want to be able to let design and research employees use more user friendly and lightweight tooling.
+
+If you would like to see more information, some of this sentiment is available in the data download.
+
+</Note>
+
+---
+
+## Wireframing
+
+Process where designers draw overviews of interactive products to establish the structure and flow of possible design solutions. A good way to think of it is that a wireframe is a blueprint and a mockup is a visual model.
+
+<ChartBar config={data.creating_wireframes} />
+
+---
+
+## Mockups
+
+Static wireframe that includes more stylistic and visual UI details to present a realistic model of what the final page or application will look like. A good way to think of it is that a wireframe is a blueprint and a mockup is a visual model.
+
+<ChartBar config={data.mockups} />
+
+---
+
+## Prototyping
+
+A simulation or sample version of a final product, which UX teams use for testing before launch.
+
+<ChartBar config={data.prototyping} />
+
+---

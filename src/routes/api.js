@@ -1,13 +1,10 @@
 import query from '~/groq';
-import chart_config from '~/chart_config';
+import { chart_config, transform_map } from '~/chart_config';
 import { mode } from '$app/env';
 
 function assemble_filter({ field_name, value }) {
-	const filter_config = chart_config[field_name].filter;
-	if (!filter_config || !filter_config.type) return null;
-	return `"${value}" ${
-		filter_config.type === 'equal' ? '==' : 'in'
-	}  ${field_name}`;
+	const { type = 'multiple' } = chart_config[field_name] || {};
+	return `"${value}" ${type === 'single' ? '==' : 'in'}  ${field_name}`;
 }
 
 function remove_empties(data) {
@@ -43,8 +40,8 @@ export async function post({ request }) {
 
 	try {
 		const tasks = chart_ids.map(async (id) => {
-			const { transform, unit = 'census participants' } =
-				chart_config[id];
+			const { type = 'multiple' } = chart_config[id] || {};
+			const transform = transform_map[type];
 			const result = await query(
 				dataset,
 				`*[${q_filter}] { "field": ${id} }`
@@ -56,7 +53,6 @@ export async function post({ request }) {
 			return {
 				field_name: id,
 				data: transformed,
-				unit,
 				completion_percentage:
 					Math.round((cleaned.length / raw.length) * 10000) / 100
 			};

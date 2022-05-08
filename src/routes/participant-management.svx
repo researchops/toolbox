@@ -21,40 +21,40 @@ theme: ocean
 
 ## Recruiting
 
-<ChartBar config={data.participant_recruiting} filterable />
+<ChartBar config={data.participant_recruiting} />
 
 ---
 
 ## Contacting
 
-<ChartBar config={data.participant_contacting} filterable />
+<ChartBar config={data.participant_contacting} />
 
 ---
 
 ## Tracking
 
-<ChartBar config={data.participant_tracking} filterable />
+<ChartBar config={data.participant_tracking} />
 
 ---
 
 ## Consent
 
-<ChartBar config={data.informed_consent} filterable />
+<ChartBar config={data.informed_consent} />
 
 ---
 
 ## Incentives
 
-<ChartBar config={data.participant_incentives} filterable />
+<ChartBar config={data.participant_incentives} />
 
 ---
 
 ## Manage Relationship
 
-<ChartBar config={data.participant_relationship_mngt} filterable />
+<ChartBar config={data.participant_relationship_mngt} />
 
 ---
 
 ## Intercept
 
-<ChartBar config={data.intercept} filterable />
+<ChartBar config={data.intercept} />

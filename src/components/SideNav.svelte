@@ -14,6 +14,11 @@
 			id: '4',
 			path: '/participant-management',
 			label: 'Recruiting & Participant Management'
+		},
+		{
+			id: '5',
+			path: '/design-collaboration',
+			label: 'Design & Collaboration'
 		}
 	];
 

@@ -7,13 +7,13 @@
 	export let filterable = false;
 	export let sort_type = 'popularity';
 	export let limit = 2;
+	export let unit = 'census participants';
 
 	$: field_name = config.field_name;
-	$: unit = config.unit;
 	$: data = config.data;
 	$: completion_percentage = config.completion_percentage;
 	$: sorter = sort_helpers[sort_type];
-	$: filter_applied = $session.filters.length > 0;
+	$: filter_applied = $session.filters?.length > 0 || false;
 
 	const handle_filter = (value) => () => {
 		filter.add({ field_name, value });

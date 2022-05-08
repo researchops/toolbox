@@ -44,131 +44,25 @@ const group_in = (data) => {
 	return result;
 };
 
-export default {
+export const transform_map = {
+	single: group,
+	multiple: group_in
+};
+
+export const chart_config = {
 	expertise: {
-		unit: 'census participants',
-		filter: {
-			type: 'equal'
-		},
-		transform: group
+		type: 'single'
 	},
 	experience: {
-		unit: 'census participants',
-		filter: {
-			type: 'equal'
-		},
-		transform: group
+		type: 'single'
 	},
 	company_type: {
-		unit: 'companies',
-		filter: {
-			type: 'equal'
-		},
-		transform: group
-	},
-	industry: {
-		unit: 'companies',
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
+		type: 'single'
 	},
 	maturity: {
-		unit: 'companies',
-		filter: {
-			type: 'equal'
-		},
-		transform: group
-	},
-	project_management: {
-		unit: 'census participants',
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	responsibilities: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
+		type: 'single'
 	},
 	researcher_count: {
-		filter: {
-			type: 'equal'
-		},
-		transform: group
+		type: 'single'
 	},
-	research_countries_from: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	research_countries_in: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	roadmapping: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	planning: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	issue_tracking: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	participant_recruiting: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	participant_contacting: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	participant_tracking: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	participant_incentives: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	informed_consent: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	participant_relationship_mngt: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	},
-	intercept: {
-		filter: {
-			type: 'in'
-		},
-		transform: group_in
-	}
 };
