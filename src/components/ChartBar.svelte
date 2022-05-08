@@ -7,7 +7,7 @@
 	export let filterable = false;
 	export let sort_type = 'popularity';
 	export let limit = 2;
-	export let unit = 'census participants';
+	export let unit = 'question respondents';
 
 	$: field_name = config.field_name;
 	$: data = config.data;
