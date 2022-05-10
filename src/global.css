@@ -2,14 +2,22 @@
 	--color-site-bg: #fbfaf6;
 	--color-plasma-40: #f1edfa;
 	--color-plasma-100: #6545a9;
-	--color-ocean-40: #F0F5FC;
-	--color-ocean-100: #2D68C8;
+	--color-ocean-40: #f0f5fc;
+	--color-ocean-100: #2d68c8;
 	--color-chart-bar-fg: #ccc;
 	--color-chart-bar-bg: #ececec;
 }
 
 body {
 	background-color: var(--color-site-bg, #fbfaf6);
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
 }
 
 main p {

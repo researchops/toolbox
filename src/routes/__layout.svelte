@@ -2,6 +2,8 @@
 	import FilterBar from '~/components/FilterBar.svelte';
 	import SideNav from '~/components/SideNav.svelte';
 	import 'modern-normalize/modern-normalize.css';
+	import '@fontsource/raleway/700.css';
+	import '@fontsource/source-sans-pro/400.css';
 	import '~/global.css';
 </script>
 
