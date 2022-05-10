@@ -3,6 +3,8 @@
 	import SideNav from '~/components/SideNav.svelte';
 	import 'modern-normalize/modern-normalize.css';
 	import '~/global.css';
+	import '@fontsource/raleway';
+	import '@fontsource/source-sans-pro'; // Defaults to weight 400 with all styles included.
 </script>
 
 <div class="layout container">
