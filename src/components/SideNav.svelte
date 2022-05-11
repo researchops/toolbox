@@ -79,14 +79,16 @@
 	.nav-item a {
 		display: block;
 		color: currentColor;
-		padding: 0.5rem 1rem 0.75rem;
+		padding: 0.75rem 1rem;
 		text-decoration: none;
 		font-size: 1.125rem;
 		border-left: 2px solid transparent;
 	}
 
 	.nav-item a.active {
-		border-color: var(--color-chart-bar-fg);
-		background-color: var(--color-chart-bar-bg);
+        color: var(--color-nav-highlight-fg);
+        font-weight: 600;
+		border-color: var(--color-nav-highlight-fg);
+		background-color: var(--color-nav-highlight-bg);
 	}
 </style>

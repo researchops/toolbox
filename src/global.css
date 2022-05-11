@@ -4,8 +4,13 @@
 	--color-plasma-100: #6545a9;
 	--color-ocean-40: #f0f5fc;
 	--color-ocean-100: #2d68c8;
+	--color-midnight-100: #0F2B42;
+
 	--color-chart-bar-fg: #ccc;
 	--color-chart-bar-bg: #ececec;
+	--color-nav-highlight-fg: var(--color-ocean-100);
+	--color-nav-highlight-bg: var(--color-ocean-40);
+	--color-site-footer-bg: var(--color-midnight-100);
 }
 
 body {
@@ -25,7 +30,7 @@ main p {
 }
 
 .container {
-	max-width: 62rem;
+	max-width: 64rem;
 	margin: 0 auto;
 	min-width: 320px;
 	padding: 0 2rem;
