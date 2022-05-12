@@ -24,7 +24,7 @@ title: Participant Info
 
 ## Discipline
 
-Our survey respondents mostly described their areas of expertise
+Our survey respondents mostly described their areas of expertise.
 
 <ChartBar config={expertise} filterable />
 
@@ -38,12 +38,14 @@ Those participants who **selected** User researcher of design researcher describ
 
 ## Experience
 
-Our survey respondents mostly described their areas of expertise
+Our survey respondents mostly described their areas of expertise.
 
 <ChartBar config={experience} filterable />
 
 ---
 
 ## Responsibilities
+
+Those participants who identified as research and/or research operations marked the following as their main job role/responsibilities.
 
 <Chunky config={responsibilities} />

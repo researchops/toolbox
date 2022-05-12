@@ -8,6 +8,7 @@
 
 	--color-chart-bar-fg: #ccc;
 	--color-chart-bar-bg: #ececec;
+	--color-text: var(--color-midnight-100);
 	--color-nav-highlight-fg: var(--color-ocean-100);
 	--color-nav-highlight-bg: var(--color-ocean-40);
 	--color-site-footer-bg: var(--color-midnight-100);
@@ -15,6 +16,7 @@
 
 body {
 	background-color: var(--color-site-bg, #fbfaf6);
+	color: var(--color-text);
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
