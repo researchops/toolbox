@@ -19,29 +19,39 @@ theme: ocean
 
 ## Transcription
 
+Transcription is the process in which speech or audio is converted into a written document. Closed captions are time-coded to the video, while a transcript is just the text with no time information.
+
 <ChartBar config={data.transcription} />
 
 ---
 
-## Text Tagging
+## Text tagging
+
+Tagging allows you to structure your data by themes, make it searchable, and better collaborate with your colleagues during the research process.
 
 <ChartBar config={data.text_tagging} />
 
 ---
 
-## Note Taking
+## Note taking
+
+User research note taking is the process of recording information while conducting user research studies such as customer interviews, usability tests, stakeholder interviews, ethnographic studies, contextual inquiries, etc.
 
 <ChartBar config={data.note_taking} />
 
 ---
 
-## Session Recording
+## Session recording
+
+Session recording is giving you the ability to view a reproduction of a user’s interaction with a website or web application. The playback itself looks just as if you were replaying a video. Session replay portrays everything exactly like the user was seeing and experiencing it.
 
 <ChartBar config={data.session_recording} />
 
 ---
 
-## Video Editing
+## Video editing
+
+Video clips of participants facing problems and expressing their opinions are far more impactful and interesting than a researcher’s simply presenting findings.
 
 <ChartBar config={data.video_editing} />
 

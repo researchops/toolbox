@@ -19,42 +19,64 @@ theme: ocean
 
 # Recruiting & Participant Management
 
-## Recruiting
+## Finding participants
+
+Finding information about people who could participate in research studies.
 
 <ChartBar config={data.participant_recruiting} />
 
 ---
 
-## Contacting
+## Contacting participants
+
+Reaching out to participants (by it through email, phone, text, Slack, etc.).
 
 <ChartBar config={data.participant_contacting} />
 
 ---
 
-## Tracking
+## Participant tracking
+
+Keeping track of which participant has taken part in which study, their compensation, etc.
 
 <ChartBar config={data.participant_tracking} />
 
 ---
 
-## Consent
+## Informed consent
+
+Administering, collecting, and storing participants&rsquo; informed consent forms.
 
 <ChartBar config={data.informed_consent} />
 
 ---
 
-## Incentives
+## Participant incentives
+
+Administering and tracking participant compensation/incentive.
 
 <ChartBar config={data.participant_incentives} />
 
 ---
 
-## Manage Relationship
+## Research customer/participant relationship management
+
+Keeping track communication with participants.
 
 <ChartBar config={data.participant_relationship_mngt} />
 
 ---
 
+## Participant scheduling
+
+Scheduling research sessions.
+
+<!-- <ChartBar config={data.participant_scheduling} />  -->
+
+---
+
 ## Intercept
+
+An intercept entails approaching people who are engaged in an activity to get their feedback. Intercepts are not a research method &mdash; you need to pair them with a research method, such as interviewing or observation.
 
 <ChartBar config={data.intercept} />
