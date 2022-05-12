@@ -19,11 +19,15 @@ theme: ocean
 
 ## Sharing findings
 
+How do researchers inform stakeholders and team mates of the research findings.
+
 <ChartBar config={data.sharing_findings} />
 
 ---
 
-## Infographics & data visualization
+## Infographics &amp; data visualization
+
+How do researchers present their data.
 
 <ChartBar config={data.infographics} />
 
