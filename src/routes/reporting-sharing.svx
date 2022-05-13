@@ -15,8 +15,6 @@ theme: ocean
 	export let data;
 </script>
 
-# Reporting & Sharing
-
 ## Sharing findings
 
 How do researchers inform stakeholders and team mates of the research findings.

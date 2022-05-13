@@ -33,7 +33,10 @@
     "@fontsource/source-sans-pro": "^4.5.9",
     "groq-js": "^0.3.0-beta.2",
     "lodash-es": "^4.17.21",
+    "mdast-util-toc": "^6.1.0",
     "mdsvex": "^0.10.5",
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "rehype-slug": "^5.0.1",
+    "unist-util-visit-parents": "^5.1.0"
   }
 }

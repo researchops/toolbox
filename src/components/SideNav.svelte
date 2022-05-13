@@ -1,5 +1,8 @@
 <script>
 	import { page } from '$app/stores';
+	import SideNavToc from './SideNavToc.svelte';
+
+	export let current_toc;
 
 	const navs = [
 		{ id: '0', path: '/', label: 'Welcome' },
@@ -50,21 +53,29 @@
 	$: current_page = $page.url.pathname;
 </script>
 
-<nav>
+<nav class="nav">
 	<ul class="nav-list">
 		{#each navs as { id, path, label, prefetch = true } (id)}
+			{@const active = current_page === path}
 			<li class="nav-item">
-				<a
-					class:active={current_page === path}
-					sveltekit:prefetch={prefetch}
-					href={path}>{label}</a
+				<a class:active sveltekit:prefetch={prefetch} href={path}
+					>{label}</a
 				>
+				{#if active}
+					<SideNavToc toc={current_toc} />
+				{/if}
 			</li>
 		{/each}
 	</ul>
 </nav>
 
 <style>
+	.nav {
+		max-height: 100vh;
+		padding-bottom: 2rem;
+		overflow-y: scroll;
+	}
+
 	.nav-list {
 		margin: 0;
 		padding: 0;
@@ -86,8 +97,8 @@
 	}
 
 	.nav-item a.active {
-        color: var(--color-nav-highlight-fg);
-        font-weight: 600;
+		color: var(--color-nav-highlight-fg);
+		font-weight: 600;
 		border-color: var(--color-nav-highlight-fg);
 		background-color: var(--color-nav-highlight-bg);
 	}

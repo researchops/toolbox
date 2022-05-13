@@ -1,5 +1,5 @@
 ---
-title: Industry Info
+title: Industry Information
 ---
 
 <script context="module">
@@ -23,8 +23,6 @@ title: Industry Info
     $: business = data.business
 
 </script>
-
-# Industry Information
 
 ## Business
 

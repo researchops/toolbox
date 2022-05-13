@@ -20,8 +20,6 @@ title: Participant Info
 
 </script>
 
-# Participant Info
-
 ## Discipline
 
 Our survey respondents mostly described their areas of expertise.

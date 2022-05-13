@@ -15,8 +15,6 @@ theme: ocean
 	export let data;
 </script>
 
-# User Research
-
 ## Moderated prototype testing
 
 Moderated usability/prototype testing is a usability testing technique that involves the active participation of a trained facilitator or moderator.

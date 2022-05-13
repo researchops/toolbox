@@ -15,8 +15,6 @@ theme: ocean
 	export let data;
 </script>
 
-# Synthesizing & Analyzing
-
 ## Transcription
 
 Transcription is the process in which speech or audio is converted into a written document. Closed captions are time-coded to the video, while a transcript is just the text with no time information.

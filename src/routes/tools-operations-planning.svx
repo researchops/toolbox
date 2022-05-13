@@ -22,8 +22,6 @@ theme: ocean
 
 </script>
 
-# Operations and Planning
-
 ## Research roadmapping
 
 A UX research roadmap is a plan that defines your team's key research goals and the strategy to reach them. It shows a timeline for the studies that will be conducted during the year to achieve those research goals.

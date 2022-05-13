@@ -17,8 +17,6 @@ theme: ocean
 
 </script>
 
-# Recruiting & Participant Management
-
 ## Finding participants
 
 Finding information about people who could participate in research studies.
