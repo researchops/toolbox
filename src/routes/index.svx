@@ -1,3 +1,5 @@
-# Welcome
+---
+title: Welcome
+---
 
 Content: TBD

@@ -31,7 +31,7 @@ function get_toc() {
 	return (tree, file) => {
 		const table = toc(tree, { ordered: true });
 		const list = clean(table.map);
-		if (file.data.fm && table.map) {
+		if (file.data.fm) {
 			file.data.fm._toc = list;
 		}
 	};

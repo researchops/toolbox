@@ -2,13 +2,15 @@
 	export let toc;
 </script>
 
-<ul class="toc-list">
-	{#each toc as item, i (i)}
-		<li class="toc-item" data-toc-level={item.level}>
-			<a href={item.url}>{item.text}</a>
-		</li>
-	{/each}
-</ul>
+{#if toc.length > 0}
+	<ul class="toc-list">
+		{#each toc as item, i (i)}
+			<li class="toc-item" data-toc-level={item.level}>
+				<a href={item.url}>{item.text}</a>
+			</li>
+		{/each}
+	</ul>
+{/if}
 
 <style>
 	.toc-list {
@@ -23,7 +25,7 @@
 
 	.toc-item a {
 		color: currentColor;
-        font-size: 1rem;
+		font-size: 1rem;
 		text-decoration: none;
 	}
 </style>
