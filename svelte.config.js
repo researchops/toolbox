@@ -33,6 +33,8 @@ function get_toc() {
 		const list = clean(table.map);
 		if (file.data.fm) {
 			file.data.fm._toc = list;
+		} else {
+			file.data.fm = { _toc: list };
 		}
 	};
 }
