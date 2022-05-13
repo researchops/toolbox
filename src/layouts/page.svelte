@@ -27,6 +27,10 @@
 		--color-chart-bar-bg: var(--color-ocean-40);
 	}
 
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
 	@media (min-width: 400px) {
 		.layout {
 			display: flex;
