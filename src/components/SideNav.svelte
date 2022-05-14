@@ -95,6 +95,7 @@
 		padding: 0.75rem 1rem;
 		text-decoration: none;
 		font-size: 1.125rem;
+		line-height: initial;
 		border-left: 2px solid transparent;
 	}
 

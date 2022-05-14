@@ -26,6 +26,7 @@
 	.toc-item a {
 		color: var(--color-midnight-80);
 		font-size: 1rem;
+		line-height: initial;
 		text-decoration: none;
 	}
 
