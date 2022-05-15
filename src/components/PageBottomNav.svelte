@@ -20,10 +20,10 @@
 
 <div class="page-nav">
 	{#if prev}
-		<a href={prev.path}><IconArrow direction="left" /> {prev.label}</a>
+		<a sveltekit:prefetch href={prev.path}><IconArrow direction="left" /> {prev.label}</a>
 	{/if}
 	{#if next}
-		<a href={next.path}>{next.label} <IconArrow /></a>
+		<a sveltekit:prefetch href={next.path}>{next.label} <IconArrow /></a>
 	{/if}
 </div>
 
