@@ -1,61 +1,16 @@
 <script>
 	import { page } from '$app/stores';
 	import SideNavToc from './SideNavToc.svelte';
+	import { nav_config } from '~/nav_config';
 
 	export let current_toc;
-
-	const navs = [
-		{ id: '0', path: '/', label: 'Welcome' },
-		{ id: '1', path: '/participants', label: 'Participant info' },
-		{ id: '2', path: '/industry-info', label: 'Industry info' },
-		{
-			id: '3',
-			path: '/tools-operations-planning',
-			label: 'Operations and planning'
-		},
-		{
-			id: '4',
-			path: '/participant-management',
-			label: 'Recruiting & Participant Management'
-		},
-		{
-			id: '5',
-			path: '/design-collaboration',
-			label: 'Design & Collaboration'
-		},
-		{
-			id: '6',
-			path: '/analytics',
-			label: 'Analytics'
-		},
-		{
-			id: '7',
-			path: '/design-research',
-			label: 'Design Research'
-		},
-		{
-			id: '8',
-			path: '/user-research',
-			label: 'User Research'
-		},
-		{
-			id: '9',
-			path: '/synthesizing-analyzing',
-			label: 'Synthesizing & analyzing'
-		},
-		{
-			id: '10',
-			path: '/reporting-sharing',
-			label: 'Reporting & sharing'
-		}
-	];
 
 	$: current_page = $page.url.pathname;
 </script>
 
 <nav class="nav">
 	<ul class="nav-list">
-		{#each navs as { id, path, label, prefetch = true } (id)}
+		{#each nav_config as { id, path, label, prefetch = true } (id)}
 			{@const active = current_page === path}
 			<li class="nav-item">
 				<a class:active sveltekit:prefetch={prefetch} href={path}
@@ -85,7 +40,7 @@
 
 	.nav-item {
 		display: block;
-		margin: .5rem 0;
+		margin: 0.5rem 0;
 	}
 
 	.nav-item a {

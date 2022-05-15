@@ -1,4 +1,5 @@
 <script>
+	import PageBottomNav from '~/components/PageBottomNav.svelte';
 	import SideNav from '~/components/SideNav.svelte';
 
 	export let theme = 'plasma';
@@ -13,6 +14,8 @@
 	<div class="layout-content">
 		<h1>{title}</h1>
 		<slot />
+		<hr />
+		<PageBottomNav />
 	</div>
 </div>
 
