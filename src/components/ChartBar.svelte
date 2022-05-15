@@ -44,7 +44,7 @@
 		{#each Object.entries(data)
 			.filter(([_, value]) => value.percent >= limit)
 			.sort(sorter) as [name, value], i (i)}
-			<li class="bar-item" style="--js-value:{value.percent}%">
+			<li class="bar-item" style="--js-value:{value.percent/100}">
 				<div class="bar-group">
 					<div class="bar-label">
 						<span class="bar-name">{name}</span>
@@ -122,7 +122,7 @@
 		width: 100%;
 		height: 100%;
 		transform-origin: center left;
-		transform: scaleX(var(--js-value, 0.1%));
+		transform: scaleX(var(--js-value, 0.1));
 		background-color: var(--color-chart-bar-fg);
 		transition: transform 0.3s ease;
 	}
