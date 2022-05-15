@@ -62,12 +62,14 @@ const sankey = (data) => {
 		});
 	});
 
-	const processed = Object.entries(result).filter(([_, v]) => v > 1).map(([k, v]) => {
-		const [from, to] = k.split(separator);
-		return { source: from + '_f', target: to + '_t', value: v };
-	});
+	const processed = Object.entries(result)
+		.filter(([_, v]) => v > 1)
+		.map(([k, v]) => {
+			const [from, to] = k.split(separator);
+			return { source: from + '_f', target: to + '_t', value: v };
+		});
 
-	return processed
+	return processed;
 };
 
 export const transform_map = {
