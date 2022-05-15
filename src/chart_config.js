@@ -2,7 +2,7 @@ import group_by from 'lodash-es/groupBy';
 
 const group = (data) => {
 	let total = data.length;
-	let grouped = group_by(data, ({ field }) => field);
+	let grouped = group_by(data, ({ field_0 }) => field_0);
 	let result = {};
 	for (let key in grouped) {
 		let count = grouped[key].length;
@@ -19,10 +19,10 @@ const group_in = (data) => {
 	let total = data.length;
 
 	const grouped = data.reduce((acc, cur) => {
-		const { field } = cur;
-		if (!field) return acc;
+		const { field_0 } = cur;
+		if (!field_0) return acc;
 
-		field.forEach((value) => {
+		field_0.forEach((value) => {
 			if (acc[value] == undefined) {
 				acc[value] = 1;
 			} else {
@@ -44,9 +44,36 @@ const group_in = (data) => {
 	return result;
 };
 
+const sankey = (data) => {
+	const separator = '::::';
+	let result = {};
+	data.forEach((entry) => {
+		const { field_0: from, field_1: to } = entry;
+		if (!from || !to) return;
+		from.forEach((source) => {
+			to.forEach((target) => {
+				const key = `${source}${separator}${target}`;
+				let value = 1;
+				if (result[key]) {
+					value = result[key] + 1;
+				}
+				result[key] = value;
+			});
+		});
+	});
+
+	const processed = Object.entries(result).filter(([_, v]) => v > 1).map(([k, v]) => {
+		const [from, to] = k.split(separator);
+		return { source: from + '_f', target: to + '_t', value: v };
+	});
+
+	return processed
+};
+
 export const transform_map = {
 	single: group,
-	multiple: group_in
+	multiple: group_in,
+	sankey
 };
 
 export const chart_config = {
@@ -68,4 +95,9 @@ export const chart_config = {
 	business: {
 		type: 'single'
 	},
+	research_sankey: {
+		type: 'sankey',
+		field_names: ['research_countries_from', 'research_countries_in'],
+		transform: sankey
+	}
 };

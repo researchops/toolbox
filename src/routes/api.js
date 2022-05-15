@@ -40,11 +40,15 @@ export async function post({ request }) {
 
 	try {
 		const tasks = chart_ids.map(async (id) => {
-			const { type = 'multiple' } = chart_config[id] || {};
+			const { type = 'multiple', field_names = [id] } =
+				chart_config[id] || {};
 			const transform = transform_map[type];
+			console.log(q_filter);
 			const result = await query(
 				dataset,
-				`*[${q_filter}] { "field": ${id} }`
+				`*[${q_filter}] { ${field_names
+					.map((field, i) => `"field_${i}": ${field}`)
+					.join(',')} }`
 			);
 			const raw = await result.get();
 			const cleaned = remove_empties(raw);

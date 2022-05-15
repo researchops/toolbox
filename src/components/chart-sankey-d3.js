@@ -4,12 +4,13 @@ import * as d3Sankey from 'd3-sankey';
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/sankey-diagram
-export function SankeyChart(
+export function sankey(
 	{
 		nodes, // an iterable of node objects (typically [{id}, …]); implied by links if missing
 		links // an iterable of link objects (typically [{source, target}, …])
 	},
 	{
+		rootID,
 		format = (v) => v.toString(), // a function or format specifier for values in titles
 		align = 'justify', // convenience shorthand for nodeAlign
 		nodeId = (d) => d.id, // given d in nodes, returns a unique identifier (string)
@@ -106,8 +107,11 @@ export function SankeyChart(
 	// A unique identifier for clip paths (to avoid conflicts).
 	const uid = `O-${Math.random().toString(16).slice(2)}`;
 
+	d3.select(rootID).select('svg').remove();
+
 	const svg = d3
-		.create('svg')
+		.select(rootID)
+		.append('svg')
 		.attr('width', width)
 		.attr('height', height)
 		.attr('viewBox', [0, 0, width, height])
