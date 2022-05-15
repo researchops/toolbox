@@ -85,15 +85,22 @@
 
 	.nav-item {
 		display: block;
+		margin: .5rem 0;
 	}
 
 	.nav-item a {
 		display: block;
-		color: currentColor;
+		/* color: currentColor; */
+		color: var(--color-midnight-80);
 		padding: 0.75rem 1rem;
 		text-decoration: none;
 		font-size: 1.125rem;
+		line-height: initial;
 		border-left: 2px solid transparent;
+	}
+
+	.nav-item a:hover {
+		color: currentColor;
 	}
 
 	.nav-item a.active {

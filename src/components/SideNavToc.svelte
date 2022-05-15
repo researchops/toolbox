@@ -14,18 +14,23 @@
 
 <style>
 	.toc-list {
-		margin: 1rem 0 1rem 2rem;
+		margin: .5rem 0 0 2rem;
 		padding: 0;
 		list-style-type: none;
 	}
 
 	.toc-item {
-		padding: 0.5rem 0;
+		padding: 1rem 0;
 	}
 
 	.toc-item a {
-		color: currentColor;
+		color: var(--color-midnight-80);
 		font-size: 1rem;
+		line-height: initial;
 		text-decoration: none;
+	}
+
+	.toc-item a:hover {
+		color: currentColor;
 	}
 </style>

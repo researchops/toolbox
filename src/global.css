@@ -5,6 +5,8 @@
 	--color-ocean-40: #f0f5fc;
 	--color-ocean-100: #2d68c8;
 	--color-midnight-100: #0F2B42;
+	--color-midnight-80: #496174; 
+	--color-midnight-60: #B3BDC5;
 
 	--color-chart-bar-fg: #ccc;
 	--color-chart-bar-bg: #ececec;
@@ -12,12 +14,23 @@
 	--color-nav-highlight-fg: var(--color-ocean-100);
 	--color-nav-highlight-bg: var(--color-ocean-40);
 	--color-site-footer-bg: var(--color-midnight-100);
+
+	--font-size-xs: clamp(0.64rem, 0.11vw + 0.62rem, 0.7rem);
+	--font-size-sm: clamp(0.8rem, 0.23vw + 0.75rem, 0.94rem);
+	--font-size-base: clamp(1rem, 0.42vw + 0.92rem, 1.25rem);
+	--font-size-md: clamp(1.25rem, 0.69vw + 1.11rem, 1.67rem);
+	--font-size-lg: clamp(1.56rem, 1.1vw + 1.34rem, 2.22rem);
+	--font-size-xl: clamp(1.95rem, 1.68vw + 1.62rem, 2.96rem);
+	--font-size-xxl: clamp(2.44rem, 2.51vw + 1.94rem, 3.95rem);
+	--font-size-xxxl: clamp(3.05rem, 3.68vw + 2.32rem, 5.26rem);
 }
 
 body {
 	background-color: var(--color-site-bg, #fbfaf6);
 	color: var(--color-text);
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: var(--font-size-base);
+	line-height: 1.5;
 }
 
 h1,
@@ -27,8 +40,25 @@ h3 {
 	font-weight: 700;
 }
 
+h1 {
+	font-size: var(--font-size-lg);
+}
+
+h2 {
+	font-size: var(--font-size-md);
+	margin: 2.4rem 0 .8rem;
+}
+
 main p {
 	margin: 0;
+}
+
+small {
+	font-size: var(--font-size-sm);
+}
+
+hr {
+	color: var(--color-midnight-60);
 }
 
 .container {
@@ -36,4 +66,10 @@ main p {
 	margin: 0 auto;
 	min-width: 320px;
 	padding: 0 2rem;
+}
+
+button,
+label,
+input {
+	font-size: var(--font-size-sm);
 }
