@@ -48,11 +48,10 @@ title: Industry Information
 
 ---
 
-<ChartSankey config={research_sankey} />
 
 ## Where research is conducted
 
-<ChartBar config={research_countries_in} filterable />
+<ChartSankey config={research_sankey} />
 
 ---
 

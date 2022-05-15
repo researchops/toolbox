@@ -16,7 +16,7 @@
 				nodeAlign: 'right',
 				linkColor: 'source-target',
 				width,
-				height: data.length * 7,
+				height: Math.max(500, data.length * 7),
 				rootID: '#svg-root'
 			}
 		);
