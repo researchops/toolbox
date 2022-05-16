@@ -59,5 +59,11 @@ Descriptions and other editorial content in the app is stored in Markdown. The f
 2. Navigate to the page you want to edit (like design-collaboration.svx)
 3. Edit file by **clicking the pencil** icon
 4. Use markdown syntax to make changes (guidelines found https://github.github.com/gfm/)
-5. Scroll down to Commit Changes and select the **Create a new branch** option.
+5. Scroll down to Commit Changes and select the **Create a new branch** option. 
 6. Name the new branch and **click propose change**.
+7. Click **Create pull request**
+8. Add a reviewer in the conversation tab or notify a collaborator in chat.
+9. Optionally **click the Checks tab** to view a branch deploy of your changes.
+10. Delete the branch.
+11. Wait till a scheduled release to publish the changes to production or request an off cycle release. 
+
