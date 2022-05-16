@@ -55,7 +55,7 @@ Make a pull request.
 Descriptions and other editorial content in the app is stored in Markdown. The following instrucionts will allow anyone to edit content on the Github website and then submit a pull request for a project team member to approve.
 
 ### Instructions:
-1. Navitate to https://github.com/researchops/toolbox/tree/dev/src/routes (ensure you are in the dev branch).
+1. Navigate to https://github.com/researchops/toolbox/tree/dev/src/routes (ensure you are in the dev branch).
 2. Navigate to the page you want to edit (like design-collaboration.svx)
 3. Edit file by **clicking the pencil** icon
 4. Use markdown syntax to make changes (guidelines found https://github.github.com/gfm/)
