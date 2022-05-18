@@ -34,7 +34,7 @@
 		scroll-behavior: smooth;
 	}
 
-	@media (min-width: 400px) {
+	@media (min-width: 420px) {
 		.layout {
 			display: flex;
 			gap: 2rem;
