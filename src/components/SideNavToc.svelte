@@ -20,13 +20,13 @@
 	}
 
 	.toc-item {
-		padding: 1rem 0;
+		padding: .45rem 0;
+		line-height: 1.3;
 	}
 
 	.toc-item a {
 		color: var(--color-midnight-80);
 		font-size: 1rem;
-		line-height: initial;
 		text-decoration: none;
 	}
 
