@@ -32,6 +32,7 @@
 		display: flex;
 		justify-content: space-between;
 		margin: 2rem 0;
+		gap: .8rem;
 	}
 
 	.page-nav a {
