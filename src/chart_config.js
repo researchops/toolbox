@@ -79,9 +79,6 @@ export const transform_map = {
 };
 
 export const chart_config = {
-	expertise: {
-		type: 'single'
-	},
 	experience: {
 		type: 'single'
 	},
