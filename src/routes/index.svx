@@ -2,7 +2,8 @@
 title: About the project
 ---
 
-<h1>What is the ReOps Toolbox Project?</h1>
+## What is the ReOps Toolbox Project?
+
 Nearly every researcher and research operations specialist has asked themselves, “what is the best tool for [insert research activity here]?” There are over 400 tools out there and research folks are constantly searching for tools that fit their needs. 
 
 That’s where the research ops toolbox comes in.
@@ -20,7 +21,7 @@ If you’d like to contribute to the census and tell us about what tools you and
 If you have any feedback or would like to get involved, you can [submit it through our contact form](https://airtable.com/shrK5MQBUElp9xjLs)  or reach out to us at tools.census@researchops.community
 
 
-<h1>What were our goals for the toolbox?</h1>
+## What were our goals for the toolbox?
 
 * Focus on digital tools (exclude field research, lab and ethnographic equipment) to answer:
     * What tools are people using?
@@ -32,7 +33,7 @@ If you have any feedback or would like to get involved, you can [submit it throu
 * Find new tools and remove ones that are no-longer operational from our inventor(ies)
 * Know what tools are frequently used together as part of a tool strategy
 
-<h1>Who is the toolbox built for?</h1>
+## Who is the toolbox built for?
 
 Anyone can use this, but we built this with four core user groups in mind. 
 * ResearchOps team of one since they focus on tools integration, management of multiple workflows and researchers, and servicing multiple types of teams (research, design, product)
@@ -40,12 +41,13 @@ Anyone can use this, but we built this with four core user groups in mind.
 * Research teams of one
 * User researchers, design researchers, and/or UX researchers
 
-<h1>How did we build the toolbox?</h1>
+## How did we build the toolbox?
+
 One core principle of this project is to embrace the iterative and collaborative nature of design. With that, we knew that we needed to start from a place of curiosity and exploration. We based our main research around the questions: 
 
-<p> What do researchers and ReOps folks need from a toolbox? </p>
+<blockquote>What do researchers and ReOps folks need from a toolbox? 
 /&
-<p> How do we provide a toolbox that meets the needs of the community? </p>
+<p> How do we provide a toolbox that meets the needs of the community? </blockquote>
 
 These are no easy questions. 
 
@@ -53,27 +55,29 @@ With the resources we had, we were able to employ design and user research to ad
 
 Being UX practitioners, we did what UX-ers do best: design, test, design again.
 
-<h2>Competitive analysis</h2>
+## Competitive analysis
 We knew we wanted more than a database, but didn’t know where to start. Andy, the project design lead, completed a competitive analysis using sites like [The State of CSS](https://stateofcss.com/), [The State of Javascript](https://stateofjs.com/), [USA facts dot org](https://usafacts.org/), and the [Feltron Annual Report](http://feltron.com/FAR13.html), to draw design inspiration and ideas.
 
-<h2>Generative research (n=11)</h2>
+## Generative research (n=11)
+
 To test if we built the right thing, we conducted cognitive walkthroughs using rough draft wireframes. We worked with 11 UX researchers and Research Ops specialists from four continents and eight countries to uncover design issues, mismatches with mental models, and overall work to improve the design. In addition to the cognitive walkthroughs we interviewed participants about their daily work and recent experiences with tool selection. (Thank you, participants!!)
 
-<h2>Card sort (n=60)</h2>
+## Card sort (n=60)
 With the cognitive walkthroughs complete, we soon realized that what we thought of as “logical groupings” of tasks throughout the research process were probably not reflective of the overall community’s understanding. 
 
 Using tasks brought up through the interview and cognitive walkthroughs, in addition to common research tasks and methods found throughout the UX research and Research Ops literature, we conducted an open card sort with participants recruited from the ReOps Slack community (total of 60 participants). 
 
 Ultimately, the data showed eight distinct groups of tools/task categories, which mapped onto six phases of the research and research ops lifecycle. These findings informed the structure of the census questionnaire, as well as the toolbox layout itself.
 
-<h2>Questionnaire pilot (n=31)</h2>
+## Questionnaire pilot (n=31)
 It was time to collect data. In true iterative fashion, we piloted five versions of the census questionnaire with 31 participants across two survey platforms in order to improve the flow, increase efficiency in our data collection, and reduce the cognitive load of the participant.
 
 In addition to demographic questions, we asked open-ended questions about tools that were used for specific research-related tasks. We opted for open-ended questions, rather than multiple select from a list of tools so that we could get a better understanding of the universe of tools used for each task. The answers from the initial survey informed the survey going forward, allowing for easier data analysis and quicker turnaround on data availability for the public.
 
 Again, thank you to the 31 folks who helped us iterate and get the census into a shippable condition! 
 
-<h2>Toolbox census (n= 200+)<h2>
+## Toolbox census (n= 200+)
+
 The toolbox census was officially launched in March 2022 and in its first push collected over 200+ responses from over 39 different countries, with an average completion rate of ##.##% (## starts, ## completions) in an average of 13 minutes and 53 seconds.
 
 We opted for open-text answers to nearly all census questions since we didn’t believe we had a firm understanding of the universe of research tools and didn’t want to exclude any tools or introduce bias into answers.
@@ -82,11 +86,12 @@ Since building the toolbox website, we’ve moved the data collection to an (Air
 
 Learn more about the project on our project public information page.
 
-<h1>Future of steps</h1>
+## Future of steps
+
 We’ve only just begun! After launching our Toolbox MVP in June, we plan to take a much deserved and needed break before we jump back in and build out the next features which include, but aren’t limited to:
 * Adding information (such as features, capabilities, and integrations) of tools
 * Benchmarking website usability (and making improvements)
-C* ontinuous data collection
+* Continuous data collection
 
 We plan to release quarterly updates. If you want to see what we have on the roadmap and how we’re doing on it, check out our [project roadmap](https://airtable.com/shrY8frhGknYfiR2x). 
 
@@ -94,14 +99,16 @@ See something on the roadmap that you’d like to help us work on? Email us at t
 
 Have feedback or requests for improvements? Let us know through our [feedback form](https://airtable.com/shrK5MQBUElp9xjLs)
 
-<h1>Download the data<h1>
+## Download the data
+
 We wanted to make sure the data and data collection process is transparent and open-access. 
 
 [View the census data](https://airtable.com/shrPD7PYR2sekvmAB/tbll8aovHGrYUfqZo)
 
 Found an error in the data? [Let us know](https://airtable.com/shrK5MQBUElp9xjLs)! 
 
-<h1>A word from the project leads</h1>
+## A word from the project leads
+
 This project started from a simple question “what are people using now?” and has grown into its own life force. We’ve spent many hours, weekends, nights, and mornings working on this through insurrections, pandemics, family crises, immigration, taking care of kids, and changing jobs (among other things). And we know it’s not perfect. It’s a work in progress and will stay so as long as tools are being developed and researchers and ReOp-ers are finessing their craft. There’s so many things that we want to build in and we are our own worst critics. We’ve had so many people help as participants, mentors, and simply sounding boards. With that, we ask for kindness in your feedback. 
 
 Thank you for your continuing support and we’re always looking forward to the next release of improvements!
