@@ -12,11 +12,9 @@ This is made by researchers & ReOps-ers, for researchers & ReOps-ers. This is a 
 
 We are continuously collecting data and improving the toolbox. 
 
-If you’d like to contribute to the census and tell us about what tools you and your team use, please fill out our census questionnaire (URL: https://airtable.com/shrvxQGZsmwjZEK41 )
+If you’d like to contribute to the census and tell us about what tools you and your team use, please fill out our census questionnaire (URL: https://airtable.com/shrW0caILlbxe5UQi )
 
-If you have any feedback, you can fill out a feedback form or reach out to us at tools.census@researchops.community
-
-If you’d like to get involved with the toolbox project, sign up here and we’ll get in touch with you [INSERT AIRTABLE LINK]
+If you have any feedback or would like to get involved, you can fill out a contact form (URL: https://airtable.com/shrK5MQBUElp9xjLs ) or reach out to us at tools.census@researchops.community
 
 ## What we have
 
