@@ -43,7 +43,6 @@ export async function post({ request }) {
 			const { type = 'multiple', field_names = [id] } =
 				chart_config[id] || {};
 			const transform = transform_map[type];
-			console.log(q_filter);
 			const result = await query(
 				dataset,
 				`*[${q_filter}] { ${field_names

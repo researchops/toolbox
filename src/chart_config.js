@@ -94,9 +94,6 @@ export const chart_config = {
 	researcher_count: {
 		type: 'single'
 	},
-	business: {
-		type: 'single'
-	},
 	research_sankey: {
 		type: 'sankey',
 		field_names: ['research_countries_from', 'research_countries_in'],

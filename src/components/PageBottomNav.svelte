@@ -29,10 +29,15 @@
 
 <style>
 	.page-nav {
-		display: flex;
-		justify-content: space-between;
 		margin: 2rem 0;
 	}
+
+    @media (min-width: 400px) {
+        .page-nav {
+		display: flex;
+		justify-content: space-between;
+	}
+    }
 
 	.page-nav a {
 		display: inline-flex;

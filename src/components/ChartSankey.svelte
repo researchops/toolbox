@@ -7,6 +7,7 @@
 	$: data = config.data;
 
 	afterUpdate(() => {
+		if (data.length <= 0) return;
 		sankey(
 			{
 				links: data
