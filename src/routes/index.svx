@@ -2,4 +2,35 @@
 title: Welcome
 ---
 
-Content: TBD
+## What is the ReOps Toolbox Project?
+
+Nearly every researcher and research operations specialist has asked themselves, “what is the best tool for [insert research activity here]?” There are over 400 tools out there and research folks are constantly searching for tools that fit their needs. 
+
+That’s where the research ops toolbox comes in.
+
+This is a community-based project focused on creating and maintaining a resource for researchers and research operations specialists that will empower people to find out not only what tools are being used, but also in which industry, by what size of teams, and where in the world.
+
+Our hope is that this will help researchers and ReOps specialists with tool audits, comparative analyses, and the evaluation and justification of specific research tools. Ultimately, we want to make the tool evaluation and selection process easier and save hundreds of hours for researchers, ReOps specialists, and those who support research.
+
+This is made by researchers & ReOps-ers, for researchers & ReOps-ers. This is a grassroots volunteer effort with no product sponsorship or affiliation. 
+
+## Download the data
+
+We wanted to make sure the data and data collection process is transparent and open-access. 
+
+[View the census data](https://airtable.com/shrPD7PYR2sekvmAB/tbll8aovHGrYUfqZo)
+
+Found an error in the data? [Let us know](https://airtable.com/shrK5MQBUElp9xjLs)! 
+
+## Feedback and getting involved
+
+We are continuously collecting data and improving the toolbox. 
+
+If you’d like to contribute to the census and tell us about what tools you and your team use, please fill out [our census questionnaire](https://airtable.com/shrW0caILlbxe5UQi)
+
+If you have any feedback or would like to get involved, you can [submit it through our contact form](https://airtable.com/shrK5MQBUElp9xjLs)  or reach out to us at tools.census@researchops.community
+
+
+
+
+
