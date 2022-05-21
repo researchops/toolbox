@@ -1,5 +1,5 @@
 <header class="header">
-    <h1>Re+Ops Tools Census <small class="label">Sandbox</small></h1>
+    <h1>Re+Ops Tools Census <small class="label">Pre-release</small></h1>
 </header>
 
 <style>
