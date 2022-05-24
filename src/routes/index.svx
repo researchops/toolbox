@@ -2,6 +2,8 @@
 title: Welcome
 ---
 
+![A toolbox with a branded sticker](./toolbox.png)
+
 ## What is the ReOps Toolbox Project?
 
 Nearly every researcher and research operations specialist has asked themselves, “what is the best tool for [insert research activity here]?” There are over 400 tools out there and research folks are constantly searching for tools that fit their needs. 
