@@ -33,6 +33,11 @@
 		--color-chart-bar-bg: var(--color-ocean-40);
 	}
 
+	.page-container:global(.rise) {
+		--color-chart-bar-fg: var(--color-rise-160);
+		--color-chart-bar-bg: var(--color-rise-40);
+	}
+
 	:global(html) {
 		scroll-behavior: smooth;
 	}

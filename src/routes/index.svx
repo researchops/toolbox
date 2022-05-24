@@ -1,8 +1,13 @@
 ---
 title: Welcome
+theme: rise
 ---
 
-![A toolbox with a branded sticker](./toolbox.png)
+<script>
+    import Note from '~/components/Note.svelte';
+</script>
+
+![A toolbox with a branded sticker](./favicon.png)
 
 ## What is the ReOps Toolbox Project?
 
@@ -18,9 +23,13 @@ This is made by researchers & ReOps-ers, for researchers & ReOps-ers. This is a 
 
 ## Download the data
 
+<note>
+
 We wanted to make sure the data and data collection process is transparent and open-access. 
 
-[View the census data](https://airtable.com/shrPD7PYR2sekvmAB/tbll8aovHGrYUfqZo)
+[View and download the census data](https://airtable.com/shrPD7PYR2sekvmAB/tbll8aovHGrYUfqZo)
+
+</note>
 
 Found an error in the data? [Let us know](https://airtable.com/shrK5MQBUElp9xjLs)! 
 
@@ -28,9 +37,11 @@ Found an error in the data? [Let us know](https://airtable.com/shrK5MQBUElp9xjLs
 
 We are continuously collecting data and improving the toolbox. 
 
-If you’d like to contribute to the census and tell us about what tools you and your team use, please fill out [our census questionnaire](https://airtable.com/shrW0caILlbxe5UQi)
+- If you’d like to contribute to the census and tell us about what tools you and your team use, please fill out [our census questionnaire](https://airtable.com/shrW0caILlbxe5UQi)
 
-If you have any feedback or would like to get involved, you can [submit it through our contact form](https://airtable.com/shrK5MQBUElp9xjLs)  or reach out to us at tools.census@researchops.community
+- If you have any feedback or would like to get involved, you can [submit it through our contact form](https://airtable.com/shrK5MQBUElp9xjLs) or, 
+
+- Reach out to us at tools.census@researchops.community
 
 
 
