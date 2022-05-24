@@ -18,7 +18,7 @@
 		property="og:description"
 		content="A community-based project focused on creating and maintaining a resource for people to find out not only what user experience research tools are being used, but also in which industry, by what size of teams, and where in the world."
 	/>
-	<meta property="og:image" content="{root}/socialimage.png" />
+	<meta property="og:image" content="{root}/social-image.png" />
 	<meta property="og:url" content="https://toolbox.researchops.community" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:site_name" content="Re+Ops Tools Census" />
