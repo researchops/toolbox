@@ -20,7 +20,9 @@
 
 <div class="page-nav">
 	{#if prev}
-		<a sveltekit:prefetch href={prev.path}><IconArrow direction="left" /> {prev.label}</a>
+		<a sveltekit:prefetch href={prev.path}
+			><IconArrow direction="left" /> {prev.label}</a
+		>
 	{/if}
 	{#if next}
 		<a sveltekit:prefetch href={next.path}>{next.label} <IconArrow /></a>
@@ -29,10 +31,16 @@
 
 <style>
 	.page-nav {
-		display: flex;
-		justify-content: space-between;
 		margin: 2rem 0;
-		gap: .8rem;
+	}
+
+	@media (min-width: 400px) {
+		.page-nav {
+			display: flex;
+			justify-content: space-between;
+			margin: 2rem 0;
+			gap: 0.8rem;
+		}
 	}
 
 	.page-nav a {

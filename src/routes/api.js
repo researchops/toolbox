@@ -22,9 +22,10 @@ function remove_empties(data) {
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function post({ request }) {
 	const body = await request.json();
-	const { chart_ids, filters } = body;
+	const { chart_ids = [], filters = [] } = body;
 
 	let dataset;
+	let participant_count;
 	if (mode === 'production') {
 		dataset = await fetch('https://toolbox-8w7.pages.dev/data.json').then(
 			(res) => res.json()
@@ -43,7 +44,6 @@ export async function post({ request }) {
 			const { type = 'multiple', field_names = [id] } =
 				chart_config[id] || {};
 			const transform = transform_map[type];
-			console.log(q_filter);
 			const result = await query(
 				dataset,
 				`*[${q_filter}] { ${field_names
@@ -51,6 +51,9 @@ export async function post({ request }) {
 					.join(',')} }`
 			);
 			const raw = await result.get();
+
+			// only need to set this once
+			if (!participant_count) participant_count = raw.length;
 			const cleaned = remove_empties(raw);
 			const transformed = transform(cleaned);
 
@@ -70,7 +73,12 @@ export async function post({ request }) {
 
 		return {
 			// @ts-expect-error
-			body: result
+			body: {
+				meta: {
+					participant_count
+				},
+				data: result
+			}
 		};
 	} catch (err) {
 		console.error(err);

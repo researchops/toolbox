@@ -79,9 +79,6 @@ export const transform_map = {
 };
 
 export const chart_config = {
-	expertise: {
-		type: 'single'
-	},
 	experience: {
 		type: 'single'
 	},
@@ -92,9 +89,6 @@ export const chart_config = {
 		type: 'single'
 	},
 	researcher_count: {
-		type: 'single'
-	},
-	business: {
 		type: 'single'
 	},
 	research_sankey: {

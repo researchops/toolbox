@@ -38,7 +38,7 @@ function page(records, next) {
 	records.forEach((record) => {
 		const raw = record._rawJson.fields;
 		const swapped = swap_fields(fields, raw);
-        const id = record.get('ID');
+        const id = record.id;
 		console.log(`pushed ${id}`)
 		swapped.id = id;
 		data.push(swapped);

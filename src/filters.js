@@ -1,4 +1,5 @@
 import { session } from '$app/stores';
+import { state } from './ui.store';
 
 const init = ($session) => {
 	if (!Array.isArray($session.filters)) {
@@ -15,6 +16,7 @@ const add = (config) =>
 		);
 		if (idx < 0) {
 			$session.filters.push(config);
+			state.set('loading');
 		}
 		return $session;
 	});
@@ -28,14 +30,18 @@ const remove = (config) =>
 		);
 		if (idx >= 0) {
 			$session.filters.splice(idx, 1);
+			state.set('loading');
 		}
 		return $session;
 	});
 
 const clear = () =>
-	session.update(($session) => ({
-		...$session,
-		filters: []
-	}));
+	session.update(($session) => {
+		state.set('loading');
+		return {
+			...$session,
+			filters: []
+		};
+	});
 
 export { add, remove, clear };

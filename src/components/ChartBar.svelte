@@ -6,7 +6,7 @@
 	export let config;
 	export let filterable = false;
 	export let sort_type = 'popularity';
-	export let limit = 2;
+	export let limit = 5;
 	export let unit = 'question respondents';
 
 	$: field_name = config.field_name;

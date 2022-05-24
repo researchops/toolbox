@@ -3,6 +3,7 @@
 	import { session } from '$app/stores';
 	import * as filter from '~/filters';
 	import FilterPill from './FilterPill.svelte';
+	import { state, participant_count } from '~/ui.store';
 
 	const handle_remove_filter = (value) => () => filter.remove(value);
 	const handle_clear_filter = () => filter.clear();
@@ -21,8 +22,12 @@
 				</li>
 			{/each}
 		</ul>
+		{#if $state === 'loading'}
+			<span>loading...</span>
+		{/if}
+		<span class="filter-info-match">{$participant_count} participants match</span>
 		<button class="filter-btn-clear" on:click={handle_clear_filter}
-			>Clear filters</button
+			>Clear all filters</button
 		>
 	</div>
 {/if}
@@ -30,9 +35,9 @@
 <style>
 	.filter-container {
 		position: sticky;
-		display: grid;
-		grid-template-columns: 3rem 1fr 6rem;
+		display: flex;
 		gap: 0.5rem;
+		align-items: center;
 		bottom: 0;
 		padding: 1rem 2rem;
 		border-top: 4px solid var(--color-ocean-100);
@@ -45,10 +50,26 @@
 	}
 
 	.filter-list {
-		display: flex;
+		flex: 1;
+		display: inline-flex;
 		gap: 0.5rem;
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
+	}
+
+	.filter-info-match {
+		font-size: 1.25rem;
+		font-style: italic;
+		color: var(--color-midnight-80);
+	}
+
+	.filter-btn-clear {
+		appearance: none;
+		border: none;
+		background-color: transparent;
+		text-decoration: underline;
+		font-size: 1.25rem;
+		color: var(--color-midnight-100);
 	}
 </style>

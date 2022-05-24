@@ -58,7 +58,8 @@ const config = {
 				alias: {
 					'~': path.resolve('./src')
 				}
-			}
+			},
+			envPrefix: ['VITE_', 'CF_PAGES_U']
 		}
 	}
 };
