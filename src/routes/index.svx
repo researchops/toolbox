@@ -23,13 +23,13 @@ This is made by researchers & ReOps-ers, for researchers & ReOps-ers. This is a 
 
 ## Download the data
 
-<note>
+<Note>
 
 We wanted to make sure the data and data collection process is transparent and open-access. 
 
 [View and download the census data](https://airtable.com/shrPD7PYR2sekvmAB/tbll8aovHGrYUfqZo)
 
-</note>
+</Note>
 
 Found an error in the data? [Let us know](https://airtable.com/shrK5MQBUElp9xjLs)! 
 
