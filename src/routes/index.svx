@@ -23,7 +23,7 @@ This is made by researchers & ReOps-ers, for researchers & ReOps-ers. This is a 
 
 ## Download the data
 
-<Note>
+<Note type="download">
 
 We wanted to make sure the data and data collection process is transparent and open-access. 
 

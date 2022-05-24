@@ -112,7 +112,7 @@
 		position: relative;
 		width: 100%;
 		height: 1.125rem;
-		background-color: var(--color-chart-bar-bg);
+		background-color: var(--color-theme-bg);
 	}
 
 	.bar-fg {
@@ -123,7 +123,7 @@
 		height: 100%;
 		transform-origin: center left;
 		transform: scaleX(var(--js-value, 0.1));
-		background-color: var(--color-chart-bar-fg);
+		background-color: var(--color-theme-fg);
 		transition: transform 0.3s ease;
 	}
 
@@ -153,8 +153,8 @@
 	}
 
 	.button-groups button.active {
-		background-color: var(--color-chart-bar-bg);
-		color: var(--color-chart-bar-fg);
-		border-bottom: 1px solid var(--color-chart-bar-fg);
+		background-color: var(--color-theme-bg);
+		color: var(--color-theme-fg);
+		border-bottom: 1px solid var(--color-theme-fg);
 	}
 </style>

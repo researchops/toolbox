@@ -11,7 +11,7 @@
 	--color-midnight-60: #B3BDC5;
 
 	--color-chart-bar-fg: #ccc;
-	--color-chart-bar-bg: #ececec;
+	--color-theme-bg: #ececec;
 	--color-text: var(--color-midnight-100);
 	--color-nav-highlight-fg: var(--color-ocean-100);
 	--color-nav-highlight-bg: var(--color-ocean-40);

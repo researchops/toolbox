@@ -24,18 +24,18 @@
 
 <style>
 	.page-container:global(.plasma) {
-		--color-chart-bar-fg: var(--color-plasma-100);
-		--color-chart-bar-bg: var(--color-plasma-40);
+		--color-theme-fg: var(--color-plasma-100);
+		--color-theme-bg: var(--color-plasma-40);
 	}
 
 	.page-container:global(.ocean) {
-		--color-chart-bar-fg: var(--color-ocean-100);
-		--color-chart-bar-bg: var(--color-ocean-40);
+		--color-theme-fg: var(--color-ocean-100);
+		--color-theme-bg: var(--color-ocean-40);
 	}
 
 	.page-container:global(.rise) {
-		--color-chart-bar-fg: var(--color-rise-160);
-		--color-chart-bar-bg: var(--color-rise-40);
+		--color-theme-fg: var(--color-rise-160);
+		--color-theme-bg: var(--color-rise-40);
 	}
 
 	:global(html) {
