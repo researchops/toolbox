@@ -14,7 +14,8 @@
 	<div class="layout-sidenav">
 		<SideNav current_toc={_toc} />
 	</div>
-	<div class="layout-content">
+
+	<div id="main-content" class="layout-content">
 		<h1>{title}</h1>
 		<slot />
 		<hr />

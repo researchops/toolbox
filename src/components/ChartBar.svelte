@@ -24,10 +24,12 @@
 	<div class="button-groups">
 		<button
 			class:active={sort_type === 'alphabet'}
+			aria-selected={sort_type === 'alphabet'}
 			on:click={() => (sort_type = 'alphabet')}>Alphabetical</button
 		>
 		<button
 			class:active={sort_type === 'popularity'}
+			aria-selected={sort_type === 'popularity'}
 			on:click={() => (sort_type = 'popularity')}>Popularity</button
 		>
 		<div>
