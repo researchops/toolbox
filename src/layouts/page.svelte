@@ -1,11 +1,14 @@
 <script>
 	import PageBottomNav from '~/components/PageBottomNav.svelte';
 	import SideNav from '~/components/SideNav.svelte';
+	import SEO from '~/components/SEO.svelte';
 
 	export let theme = 'plasma';
 	export let title = '⚠️ Missing Title';
 	export let _toc;
 </script>
+
+<SEO page_title={title} />
 
 <div class="page-container {theme} layout container">
 	<div class="layout-sidenav">
