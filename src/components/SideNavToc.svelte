@@ -5,7 +5,7 @@
 {#if toc.length > 0}
 	<ul class="toc-list">
 		{#each toc as item, i (i)}
-			{#if item.level < 2}
+			{#if item.level < 1}
 				<li class="toc-item">
 					<a href={item.url}>{item.text}</a>
 				</li>
