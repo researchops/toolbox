@@ -27,7 +27,9 @@ A user path (also known as ‘user flow’) is a visual representation of what h
 
 ## Sentiment analysis
 
-A Sentiment Score Chart is an approach to quantify and visualize qualitative data. It provides a means to understand the emotions users shared during qualitative feedback sessions, or open-ended responses on a survey. By segmenting out these areas in a polarized histogram, team members can more easily identify the positive and negative portions of their product.
+A Sentiment Score Chart is an approach to quantify and visualize qualitative data. It provides a means to understand the emotions users shared during qualitative feedback sessions, or open-ended responses on a survey. Segmenting feedbackin a histogram helps team members  more easily identify the positive and negative portions of their product.
+
+Source: Landon LaPorte, ["How to Build a Useful Sentiment Score Chart"](https://www.uxbooth.com/articles/build-sentiment-score-chart/)
 
 <ChartBar config={data.sentiment_analysis} />
 
