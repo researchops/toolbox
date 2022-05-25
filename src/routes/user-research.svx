@@ -19,6 +19,8 @@ theme: ocean
 
 Moderated usability/prototype testing is a usability testing technique that involves the active participation of a trained facilitator or moderator.
 
+Source: Justinmind, ["Moderated vs unmoderated usability testing: Which do you need?"](https://www.justinmind.com/blog/moderated-vs-unmoderated-usability-testing-which-do-you-need)
+
 <ChartBar config={data.moderated_usability_testing} />
 
 ---
@@ -26,6 +28,8 @@ Moderated usability/prototype testing is a usability testing technique that invo
 ## Surveys
 
 A user experience (UX) survey collects quantitative and qualitative data about a user's interactions and experience with a website or digital product.
+
+Source: hotjar, ["How to use UX surveys to gain product experience insights"](https://www.hotjar.com/ux-design/surveys/)
 
 <ChartBar config={data.surveys} />
 
@@ -35,6 +39,8 @@ A user experience (UX) survey collects quantitative and qualitative data about a
 
 User interviews are typically performed with the potential users of a design, as part of an ideation phase or during early concept development. User interviews follow a structured methodology whereby the interviewer prepares a number of topics to cover, makes a record of what is said in the interview, and systematically analyzes the conversation after the interview.
 
+Source: Interaction Design Foundation, ["User Interviews"](https://www.interaction-design.org/literature/topics/user-interviews)
+
 <ChartBar config={data.interviews} />
 
 ---
@@ -43,6 +49,8 @@ User interviews are typically performed with the potential users of a design, as
 
 A diary study is a research method used to collect qualitative data about user behaviors, activities, and experiences over time.
 
+Source: Kim Salazar, ["Diary Studies: Understanding Long-Term User Behavior and Experiences"](https://www.nngroup.com/articles/diary-studies/)
+
 <ChartBar config={data.diary_studies} />
 
 ---
@@ -50,6 +58,8 @@ A diary study is a research method used to collect qualitative data about user b
 ## Focus Groups
 
 In a focus group, you bring together 6–9 users to discuss issues and concerns about the features of a user interface.
+
+Source: Jakob Nielsen, ["The Use and Misuse of Focus Groups"](https://www.nngroup.com/articles/focus-groups/)
 
 <ChartBar config={data.focus_groups} />
 
