@@ -41,17 +41,17 @@ We knew we wanted more than a database, but didn’t know where to start. Andy, 
 
 ### Generative research 
 
-To test if we built the right thing, we conducted cognitive walkthroughs using rough draft wireframes. Over the course of a month, we worked with *11 UX researchers and Research Ops specialists* from four continents and eight countries to uncover design issues, mental model mismatches, and overall work to improve the design. In addition to the cognitive walkthroughs we interviewed participants about their daily work and recent experiences with tool selection. (Thank you, participants!!)
+To test if we built the right thing, we conducted cognitive walkthroughs using rough draft wireframes. Over the course of a month, we worked with **11 UX researchers and Research Ops specialists** from **four continents** and **eight countries** to uncover design issues, mental model mismatches, and overall work to improve the design. In addition to the cognitive walkthroughs we interviewed participants about their daily work and recent experiences with tool selection. (Thank you, participants!!)
 
 ### Card sort 
 With the cognitive walkthroughs complete, we soon realized that what we thought of as “logical groupings” of tasks throughout the research process were probably not reflective of the overall community’s understanding. 
 
-Using tasks brought up through the interview and cognitive walkthroughs, in addition to common research tasks and methods found throughout the UX research and Research Ops literature, we conducted an open card sort with participants recruited from the ReOps Slack community (total of *60 participants* over a two week timeframe). 
+Using tasks brought up through the interview and cognitive walkthroughs, in addition to common research tasks and methods found throughout the UX research and Research Ops literature, we conducted an open card sort with participants recruited from the ReOps Slack community (total of **60 participants** over a two week timeframe). 
 
-Ultimately, the data showed *eight distinct groups* of tools/task categories, which mapped onto *six phases of the research and research ops lifecycle*. These findings informed the structure of the census questionnaire, as well as the toolbox layout itself.
+Ultimately, the data showed **eight distinct groups** of tools/task categories, which mapped onto **six phases of the research and research ops lifecycle**. These findings informed the structure of the census questionnaire, as well as the toolbox layout itself.
 
 ### Questionnaire pilot
-It was time to collect data. In true iterative fashion, we piloted five versions of the census questionnaire with *31 participants* across two survey platforms in order to improve the flow, increase efficiency in our data collection, and reduce the cognitive load of the participant.
+It was time to collect data. In true iterative fashion, we piloted five versions of the census questionnaire with **31 participants** across two survey platforms in order to improve the flow, increase efficiency in our data collection, and reduce the cognitive load of the participant.
 
 In addition to demographic questions, we asked open-ended questions about tools that were used for specific research-related tasks. We opted for open-ended questions, rather than multiple select from a list of tools so that we could get a better understanding of the universe of tools used for each task. The answers from the initial survey informed the survey going forward, allowing for easier data analysis and quicker turnaround on data availability for the public.
 
