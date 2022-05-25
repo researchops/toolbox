@@ -75,6 +75,8 @@ Scheduling research sessions.
 
 ## Intercept
 
-An intercept entails approaching people who are engaged in an activity to get their feedback. Intercepts are not a research method &mdash; you need to pair them with a research method, such as interviewing or observation.
+An intercept entails approaching people who are engaged in an activity to get their feedback. 
+
+Source: Victor Yocco, ["The Art Of The Intercept: Moving Beyond “Would You Like To Take A Survey?”"](https://www.smashingmagazine.com/2016/02/the-art-of-the-intercept/)
 
 <ChartBar config={data.intercept} />
