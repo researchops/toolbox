@@ -41,11 +41,15 @@ How do researchers present their data.
 
 A research repository is a shared collection of UX-research-related elements that should support the following functions at the organization level: grow UX awareness and participation in UX work among leadership, product owners, and the organization at large.
 
+Source: Kara Pernice, ["Research Repositories for Tracking UX Research and Growing Your ResearchOps"](https://www.nngroup.com/articles/research-repositories/)
+
 <ChartBar config={data.research_repo} />
 
 ---
 
 ## Insights repositories
+
+Much like a research repository, but specifically for *insights* that are derived from research projects. 
 
 <ChartBar config={data.insight_repo} />
 
