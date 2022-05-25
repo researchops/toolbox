@@ -57,9 +57,9 @@ In addition to demographic questions, we asked open-ended questions about tools 
 
 Again, thank you to the 31 folks who helped us iterate and get the census into a shippable condition! 
 
-### Toolbox census (n= 200+)
+### Toolbox census
 
-The toolbox census was officially launched in March 2022 and in its first push collected over 200+ responses from over 39 different countries. the typical time to completion was 13 minutes and 53 seconds. (Unfortunately, given the platform limitations, we don't have a start-completion rate.)
+The toolbox census was officially launched in March 2022 and in its first push collected over 200+ responses from over 39 different countries. The typical time to completion was 13 minutes and 53 seconds. (Unfortunately, given the platform limitations, we don't have a start-completion rate.)
 
 We opted for open-text answers to nearly all census questions since we didn’t believe we had a firm understanding of the universe of research tools and didn’t want to exclude any tools or introduce bias into answers.
 
