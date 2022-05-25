@@ -63,7 +63,7 @@ The toolbox census was officially launched in March 2022 and in its first push c
 
 We opted for open-text answers to nearly all census questions since we didn’t believe we had a firm understanding of the universe of research tools and didn’t want to exclude any tools or introduce bias into answers.
 
-Since building the toolbox website, we’ve moved the data collection to an (Airtable form)[https://airtable.com/shrW0caILlbxe5UQi], which allows us to provide faster and more consistent updates to the toolbox.
+Since building the toolbox website, we’ve moved the data collection to an [Airtable form](https://airtable.com/shrW0caILlbxe5UQi), which allows us to provide faster and more consistent updates to the toolbox.
 
 Learn more about the project on our project public information page.
 
