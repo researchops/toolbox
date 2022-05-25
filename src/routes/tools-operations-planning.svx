@@ -26,7 +26,7 @@ theme: ocean
 
 A UX research roadmap is a plan that defines your team's key research goals and the strategy to reach them. It shows a timeline for the studies that will be conducted during the year to achieve those research goals.
 
-Source: Nora Pekker, ["How to Build a compelling UX Research Roadmap" (2021)](https://medium.com/design-ibm/how-to-build-a-compelling-ux-research-roadmap-227448005c82)
+Source: Nora Pekker, ["How to Build a compelling UX Research Roadmap"](https://medium.com/design-ibm/how-to-build-a-compelling-ux-research-roadmap-227448005c82)
 
 <ChartBar config={roadmapping} />
 
@@ -36,7 +36,7 @@ Source: Nora Pekker, ["How to Build a compelling UX Research Roadmap" (2021)](ht
 
 A research plan is a document that sets expectations and highlights the most important information you need to communicate with stakeholders in a specific research project. It is usually a collaboration between all stakeholders to ensure it meets the goals and objectives you've laid out.
 
-Source: Zack Naylor, ["How to Create a UX Research Plan" (2021)](https://blog.aureliuslab.com/2021/08/25/how-to-create-a-ux-research-plan-free-template-inside/)
+Source: Zack Naylor, ["How to Create a UX Research Plan"](https://blog.aureliuslab.com/2021/08/25/how-to-create-a-ux-research-plan-free-template-inside/)
 
 <ChartBar config={planning} />
 
