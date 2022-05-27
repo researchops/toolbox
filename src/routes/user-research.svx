@@ -62,5 +62,3 @@ In a focus group, you bring together 6–9 users to discuss issues and concerns 
 Source: Jakob Nielsen, ["The Use and Misuse of Focus Groups"](https://www.nngroup.com/articles/focus-groups/)
 
 <ChartBar config={data.focus_groups} />
-
----
