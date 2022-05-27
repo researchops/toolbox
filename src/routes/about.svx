@@ -26,9 +26,15 @@ Anyone can use this, but we built this with four core user groups in mind.
 
 One core principle of this project is to embrace the iterative and collaborative nature of design. With that, we knew that we needed to start from a place of curiosity and exploration. We based our main research around the questions: 
 
-<blockquote>What do researchers and ReOps folks need from a toolbox? 
-<p> &
-<p> How do we provide a toolbox that meets the needs of the community? </blockquote>
+<blockquote>
+
+What do researchers and ReOps folks need from a toolbox? 
+ 
+&
+
+How do we provide a toolbox that meets the needs of the community? 
+
+</blockquote>
 
 These are no easy questions. 
 
