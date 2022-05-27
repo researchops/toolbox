@@ -1,6 +1,4 @@
-
-🧰
-
+![A toolbox with a branded research operations sticker on it](https://dev.toolbox-8w7.pages.dev/favicon.png)
 
 # ResearchOps Toolbox
 
@@ -56,7 +54,7 @@ Descriptions and other editorial content in the app is stored in Markdown. The f
 1. Navigate to https://github.com/researchops/toolbox/tree/dev/src/routes (ensure you are in the dev branch).
 2. Navigate to the page you want to edit (like design-collaboration.svx)
 3. Edit file by **clicking the pencil** icon
-4. Use markdown syntax to make changes (guidelines found [on markdownguide.org](https://www.markdownguide.org/basic-syntax/)
+4. Use markdown syntax to make changes (guidelines found [on markdownguide.org](https://www.markdownguide.org/basic-syntax/))
 5. Scroll down to Commit Changes and select the **Create a new branch** option. 
 6. Name the new branch and **click propose change**.
 7. Click **Create pull request**
