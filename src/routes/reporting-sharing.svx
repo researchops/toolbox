@@ -52,5 +52,3 @@ Source: Kara Pernice, ["Research Repositories for Tracking UX Research and Growi
 Much like a research repository, but specifically for *insights* that are derived from research projects. 
 
 <ChartBar config={data.insight_repo} />
-
----
