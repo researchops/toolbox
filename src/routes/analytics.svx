@@ -70,5 +70,3 @@ Your website’s search engine can tell you what your web visitors want, how the
 Source: Scarlett Payne, ["The Complete Guide to UX Research Methods"](https://boldist.co/research/the-complete-guide-to-ux-research-methods/)
 
 <ChartBar config={data.search_log_analysis} />
-
----
