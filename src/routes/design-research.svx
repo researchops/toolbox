@@ -112,5 +112,3 @@ A heuristic evaluation is a method of inspecting and evaluating the usability of
 Source: Matt Rae, ["How to Use Heuristic Evaluations to Improve Product Designs"](https://xd.adobe.com/ideas/process/user-testing/how-to-heuristic-evaluation-analysis-ux-design/)
 
 <ChartBar config={data.heuristic_evaluations} />
-
----
