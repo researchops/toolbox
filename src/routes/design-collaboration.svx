@@ -68,5 +68,3 @@ A simulation or sample version of a final product, which UX teams use for testin
 Source: UXPin, ["What Is a Prototype: A Guide to Functional UX"](https://www.uxpin.com/studio/blog/what-is-a-prototype-a-guide-to-functional-ux)
 
 <ChartBar config={data.prototyping} />
-
----
