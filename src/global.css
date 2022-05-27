@@ -55,6 +55,13 @@ main p {
 	margin: 0;
 }
 
+blockquote {
+	font-family: 'Raleway', sans-serif;
+	font-variation-settings: "wght" 400;
+	text-transform: uppercase;
+	text-align: center;
+}
+
 small {
 	font-size: var(--font-size-sm);
 }
