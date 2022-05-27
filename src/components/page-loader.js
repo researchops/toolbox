@@ -1,5 +1,5 @@
 import { browser } from '$app/env';
-import { state, participant_count } from "~/ui.store";
+import { state, participant_count } from '~/ui.store';
 
 export const create_loader =
 	(chart_ids) =>

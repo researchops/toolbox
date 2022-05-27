@@ -3,10 +3,14 @@
 	import { session } from '$app/stores';
 	import * as filter from '~/filters';
 	import FilterPill from './FilterPill.svelte';
-	import { state, participant_count } from '~/ui.store';
+	import { state, participant_count, mode } from '~/ui.store';
 
 	const handle_remove_filter = (value) => () => filter.remove(value);
 	const handle_clear_filter = () => filter.clear();
+
+	const handle_mode = (e) => {
+		$mode = e.target.checked ? 'filtered' : 'full';
+	};
 </script>
 
 {#if Array.isArray($session.filters) && $session.filters.length > 0}
@@ -20,12 +24,23 @@
 						on:click={handle_remove_filter({ field_name, value })}
 					/>
 				</li>
+				<li>
+					<label
+						><input
+							on:change={handle_mode}
+							type="checkbox"
+							checked={$mode === 'filtered'}
+						/>Toggle filters</label
+					>
+				</li>
 			{/each}
 		</ul>
 		{#if $state === 'loading'}
 			<span>loading...</span>
 		{/if}
-		<span class="filter-info-match">{$participant_count} participants match</span>
+		<span class="filter-info-match"
+			>{$participant_count} participants match</span
+		>
 		<button class="filter-btn-clear" on:click={handle_clear_filter}
 			>Clear all filters</button
 		>
