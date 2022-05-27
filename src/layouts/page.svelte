@@ -46,7 +46,7 @@
 	@media (min-width: 420px) {
 		.layout {
 			display: flex;
-			gap: 2rem;
+			gap: 4rem;
 		}
 
 		.layout-content {

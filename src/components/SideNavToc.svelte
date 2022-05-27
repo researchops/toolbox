@@ -16,8 +16,9 @@
 
 <style>
 	.toc-list {
-		margin: 0.5rem 0 0 2rem;
-		padding: 0;
+		margin: 0.5rem 0 0 1rem;
+		padding: 0 0 0 1rem;
+		border-left: 2px solid var(--color-midnight-60);
 		list-style-type: none;
 	}
 
