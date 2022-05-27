@@ -5,7 +5,9 @@
 	import 'modern-normalize/modern-normalize.css';
 	import '@fontsource/raleway/700.css';
 	import '@fontsource/source-sans-pro/400.css';
+	import '@fontsource/source-sans-pro/400-italic.css';
 	import '@fontsource/source-sans-pro/600.css';
+	import '@fontsource/source-sans-pro/800.css';
 	import '~/global.css';
 </script>
 
