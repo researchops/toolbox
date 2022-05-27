@@ -19,6 +19,8 @@ theme: ocean
 
 Concept testing is a research method that involves getting user feedback during the upfront part of the design process to give feedback on potential solutions.
 
+Source: Victor Yocco, [The Value Of Concept Testing As Part Of Product Design](https://www.smashingmagazine.com/2021/11/concept-testing-part-of-product-design/)
+
 <ChartBar config={data.concept_testing} />
 
 ---
@@ -26,6 +28,8 @@ Concept testing is a research method that involves getting user feedback during 
 ## Card sorting
 
 Card sorting is a method that helps you discover how people understand and categorize information. In a card sorting study, participants group ideas or information written on cards into categories in a way that makes sense to them.
+
+Source: Maze, [Card Sorting: Improving Information Architecture](https://maze.co/guides/ux-research/card-sorting/)
 
 <ChartBar config={data.card_sorting} />
 
@@ -35,6 +39,8 @@ Card sorting is a method that helps you discover how people understand and categ
 
 Tree testing is a usability technique for evaluating the findability of topics in a website. It is also known as reverse card sorting or card-based classification.
 
+Source: Wikipedia, [Tree testing](https://en.wikipedia.org/wiki/Tree_testing)
+
 <ChartBar config={data.tree_testing} />
 
 ---
@@ -42,6 +48,8 @@ Tree testing is a usability technique for evaluating the findability of topics i
 ## First click testing
 
 First Click Testing examines what a test participant would click on first on the interface in order to complete their intended task. It can be performed on a functioning website, a prototype or a wireframe.
+
+Source: Usability.gov, [First Click Testing](https://www.usability.gov/how-to-and-tools/methods/first-click-testing.html)
 
 <ChartBar config={data.first_click_testing} />
 
@@ -51,6 +59,8 @@ First Click Testing examines what a test participant would click on first on the
 
 Task analysis is the process of learning about ordinary users by observing them in action to understand in detail how they perform their tasks and achieve their intended goals. Tasks analysis helps identify the tasks that your website and applications must support and can also help you refine or re-define your site’s navigation or search by determining the appropriate content scope.
 
+Source: Usability.gov, [Task Analysis](https://www.usability.gov/how-to-and-tools/methods/task-analysis.html)
+
 <ChartBar config={data.task_analysis} />
 
 ---
@@ -58,6 +68,8 @@ Task analysis is the process of learning about ordinary users by observing them 
 ## Benchmarking testing
 
 UX benchmarking is the process of evaluating a product or service's user experience by using metrics to gauge its relative performance against a meaningful standard.
+
+Source: Alita Joyce, [7 Steps to Benchmarking Your Product's UX](https://www.nngroup.com/articles/product-ux-benchmarks/)
 
 <ChartBar config={data.ux_benchmarking} />
 
@@ -67,6 +79,8 @@ UX benchmarking is the process of evaluating a product or service's user experie
 
 Usability testing is the practice of testing how easy a design is to use with a group of representative users. It usually involves observing users as they attempt to complete tasks and can be done for different types of designs.
 
+Source: Interaction Design Foundation, [Usability Testing](https://www.interaction-design.org/literature/topics/usability-testing)
+
 <ChartBar config={data.unmoderated_usability_testing} />
 
 ---
@@ -74,6 +88,8 @@ Usability testing is the practice of testing how easy a design is to use with a 
 ## Accessibility evaluation
 
 Holistic assessment of the content, design and code against a set of the most common impairments, aiming to highlight the areas that users are most likely to find challenging.
+
+Source: Tina Remiz, [How to do a UX accessibility evaluation](https://makeitclear.com/insight/how-to-do-a-ux-accessibility-evaluation)
 
 <ChartBar config={data.accessibility_evaluation} />
 
@@ -83,6 +99,8 @@ Holistic assessment of the content, design and code against a set of the most co
 
 A competitive analysis provides strategic insights into the features, functions, flows, and feelings evoked by the design solutions of your competitors. By understanding these facets of competitors’ products, you can strategically design your solution with the goal of making a superior product and/or experience.
 
+Source: Jill DaSilva, ["A Guide to Competitive Analysis for UX Design"](https://xd.adobe.com/ideas/process/user-research/guide-to-competitive-analysis-ux-design/)
+
 <ChartBar config={data.competitive_analysis} />
 
 ---
@@ -91,6 +109,6 @@ A competitive analysis provides strategic insights into the features, functions,
 
 A heuristic evaluation is a method of inspecting and evaluating the usability of a website, or product. You may also hear it referred to as a “usability audit” or an “expert review”. Using a set of heuristics, one or more experts will evaluate how well a product complies to these heuristics to define its usability. Often they’ll leverage a score-card, or numeric-based scoring (weighted to the impact on usability) for each heuristic analysis.
 
-<ChartBar config={data.heuristic_evaluations} />
+Source: Matt Rae, ["How to Use Heuristic Evaluations to Improve Product Designs"](https://xd.adobe.com/ideas/process/user-testing/how-to-heuristic-evaluation-analysis-ux-design/)
 
----
+<ChartBar config={data.heuristic_evaluations} />

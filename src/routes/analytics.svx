@@ -15,8 +15,6 @@ theme: ocean
 	export let data;
 </script>
 
-<!-- # Analytics -->
-
 ## Path analysis
 
 A user path (also known as ‘user flow’) is a visual representation of what happens when people use your website or app. Often used to find areas where users bounce/drop from the app/website
@@ -27,7 +25,9 @@ A user path (also known as ‘user flow’) is a visual representation of what h
 
 ## Sentiment analysis
 
-A Sentiment Score Chart is an approach to quantify and visualize qualitative data. It provides a means to understand the emotions users shared during qualitative feedback sessions, or open-ended responses on a survey. By segmenting out these areas in a polarized histogram, team members can more easily identify the positive and negative portions of their product.
+A Sentiment Score Chart is an approach to quantify and visualize qualitative data. It provides a means to understand the emotions users shared during qualitative feedback sessions, or open-ended responses on a survey. Segmenting feedbackin a histogram helps team members  more easily identify the positive and negative portions of their product.
+
+Source: Landon LaPorte, ["How to Build a Useful Sentiment Score Chart"](https://www.uxbooth.com/articles/build-sentiment-score-chart/)
 
 <ChartBar config={data.sentiment_analysis} />
 
@@ -70,3 +70,4 @@ Your website’s search engine can tell you what your web visitors want, how the
 Source: Scarlett Payne, ["The Complete Guide to UX Research Methods"](https://boldist.co/research/the-complete-guide-to-ux-research-methods/)
 
 <ChartBar config={data.search_log_analysis} />
+

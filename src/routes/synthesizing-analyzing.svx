@@ -19,6 +19,8 @@ theme: ocean
 
 Transcription is the process in which speech or audio is converted into a written document. Closed captions are time-coded to the video, while a transcript is just the text with no time information.
 
+Source: Jaclyn Leduc, ["What is Transcription?"](https://www.3playmedia.com/blog/what-is-transcription/)
+
 <ChartBar config={data.transcription} />
 
 ---
@@ -26,6 +28,8 @@ Transcription is the process in which speech or audio is converted into a writte
 ## Text tagging
 
 Tagging allows you to structure your data by themes, make it searchable, and better collaborate with your colleagues during the research process.
+
+Source: TestingTime, ["Use tagging to enrich your research"](https://www.testingtime.com/en/blog/use-tagging-to-enrich-your-research/)
 
 <ChartBar config={data.text_tagging} />
 
@@ -35,6 +39,8 @@ Tagging allows you to structure your data by themes, make it searchable, and bet
 
 User research note taking is the process of recording information while conducting user research studies such as customer interviews, usability tests, stakeholder interviews, ethnographic studies, contextual inquiries, etc.
 
+Source: UX Planet, ["A step-by-step guide to user research note taking"](https://uxplanet.org/a-step-by-step-guide-to-user-research-note-taking-47e3184f7654)
+
 <ChartBar config={data.note_taking} />
 
 ---
@@ -42,6 +48,8 @@ User research note taking is the process of recording information while conducti
 ## Session recording
 
 Session recording is giving you the ability to view a reproduction of a user’s interaction with a website or web application. The playback itself looks just as if you were replaying a video. Session replay portrays everything exactly like the user was seeing and experiencing it.
+
+Source: UXTweak, ["Basics of Session Recording"](https://blog.uxtweak.com/session-recording-basics/)
 
 <ChartBar config={data.session_recording} />
 
@@ -51,6 +59,6 @@ Session recording is giving you the ability to view a reproduction of a user’s
 
 Video clips of participants facing problems and expressing their opinions are far more impactful and interesting than a researcher’s simply presenting findings.
 
-<ChartBar config={data.video_editing} />
+Source: Jim Ross, ["Creating Better UX Research Videos"](https://www.uxmatters.com/mt/archives/2013/07/creating-better-ux-research-videos.php)
 
----
+<ChartBar config={data.video_editing} />
