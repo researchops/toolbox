@@ -23,6 +23,9 @@
 		<a sveltekit:prefetch href={prev.path}
 			><IconArrow direction="left" /> {prev.label}</a
 		>
+	{:else}
+		<!-- empty div to force 'next' button to float right -->
+		<div aria-hidden />
 	{/if}
 	{#if next}
 		<a sveltekit:prefetch href={next.path}>{next.label} <IconArrow /></a>
