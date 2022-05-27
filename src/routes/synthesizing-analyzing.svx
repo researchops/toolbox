@@ -62,5 +62,3 @@ Video clips of participants facing problems and expressing their opinions are fa
 Source: Jim Ross, ["Creating Better UX Research Videos"](https://www.uxmatters.com/mt/archives/2013/07/creating-better-ux-research-videos.php)
 
 <ChartBar config={data.video_editing} />
-
----
