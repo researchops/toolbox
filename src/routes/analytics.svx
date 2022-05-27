@@ -15,8 +15,6 @@ theme: ocean
 	export let data;
 </script>
 
-<!-- # Analytics -->
-
 ## Path analysis
 
 A user path (also known as ‘user flow’) is a visual representation of what happens when people use your website or app. Often used to find areas where users bounce/drop from the app/website
@@ -39,19 +37,17 @@ Source: Landon LaPorte, ["How to Build a Useful Sentiment Score Chart"](https://
 
 A heat map is a data visualization that shows how website users click, scroll, and move on the page. The 'heat' part of the name comes from the color scale: red depicts popular (hot) areas of the page, and blue less popular (cold) areas.
 
+Source: hotjar, ["Using heat maps to improve your website’s UX: 5 ways to get started"](https://www.hotjar.com/blog/improve-website-ux-with-heatmaps/)
+
 <ChartBar config={data.heat_maps} />
-
-<Note>
-Our participants are very divided about the ease of use and robust functionality of project management tools. They want to be able to use the same systems that their business and development partners use – but also want to be able to let design and research employees use more user friendly and lightweight tooling.
-
-If you would like to see more information some of this sentiment is available in the data download.   
-</Note>
 
 ---
 
 ## Eye tracking
 
 Eye tracking is a technology that measures eye movements and makes it possible to know where a person is looking, what they are looking at, and for how long their gaze is in a particular spot.
+
+Source: Nick Babich, ["Eye Tracking and Usability: How Does it Work?"](https://xd.adobe.com/ideas/process/user-research/eye-tracking-and-usability/)
 
 <ChartBar config={data.eye_tracking} />
 
@@ -61,6 +57,8 @@ Eye tracking is a technology that measures eye movements and makes it possible t
 
 A technique of showing two or more variants of a design to users at random to find out which one performs bettert
 
+Source: Oliver Lindberg, ["6 Essential Tips for Effective A/B Testing"](https://xd.adobe.com/ideas/process/user-testing/effective-ab-testing-essential-tips)
+
 <ChartBar config={data.ab_testing} />
 
 ---
@@ -69,6 +67,7 @@ A technique of showing two or more variants of a design to users at random to fi
 
 Your website’s search engine can tell you what your web visitors want, how they look for it, and how well your content strategy meets their needs.
 
+Source: Scarlett Payne, ["The Complete Guide to UX Research Methods"](https://boldist.co/research/the-complete-guide-to-ux-research-methods/)
+
 <ChartBar config={data.search_log_analysis} />
 
----
