@@ -10,7 +10,7 @@
 
     header a,
     header a:visited {
-        font-family: 'Raleway', sans-serif;
+        font-family: var(--headings-font);
         font-size: var(--font-size-md);
         font-weight: 700;
         line-height: 1.1;
