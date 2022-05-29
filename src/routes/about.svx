@@ -92,4 +92,4 @@ This project started from a simple question “what are people using now?” and
 
 Thank you for your continuing support and we’re always looking forward to the next release of improvements!
 
-Andy, Caro, and Derek
+_Andy, Caro, and Derek_
