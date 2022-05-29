@@ -26,12 +26,6 @@ Our survey respondents mostly described their areas of expertise.
 
 <ChartBar config={expertise} filterable />
 
-<Note>
-
-Those participants who **selected** User researcher of design researcher described their role as one that was ancecdotally like _something_ we did not expect. This indicates that job roles within the industry may be changing in this certain way.
-
-</Note>
-
 ---
 
 ## Experience
