@@ -15,7 +15,7 @@
 <div class="page-container {theme} layout">
 	
 	<aside>
-		<Nav />
+		<Nav /> 
 
 		<SideNav current_toc={_toc} />
 
