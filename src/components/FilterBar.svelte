@@ -24,16 +24,16 @@
 						on:click={handle_remove_filter({ field_name, value })}
 					/>
 				</li>
-				<li>
-					<label
-						><input
-							on:change={handle_mode}
-							type="checkbox"
-							checked={$mode === 'filtered'}
-						/>Toggle filters</label
-					>
-				</li>
 			{/each}
+			<li>
+				<label
+					><input
+						on:change={handle_mode}
+						type="checkbox"
+						checked={$mode === 'filtered'}
+					/>Toggle filters</label
+				>
+			</li>
 		</ul>
 		{#if $state === 'loading'}
 			<span>loading...</span>
