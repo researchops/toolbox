@@ -9,7 +9,7 @@
 </script>
 
 <nav class="nav">
-	<a class="skip-link" href="#main-content">Skip to main content</a>
+	<a class="skip-link" href="#main">Skip to main content</a>
 
 	<ul class="nav-list">
 		{#each nav_config as { id, path, label, prefetch = true } (id)}

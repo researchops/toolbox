@@ -1,17 +1,21 @@
 <header class="header">
-    <h1>Re+Ops Tools Census 
+    <a id="logo" href="/" rel="home">Re+Ops Tools Census</a> 
     <!-- <small class="label">Sandbox</small> -->
-    </h1>
 </header>
 
 <style>
     .header {
-        margin: 2rem 0 0 1rem; 
+        margin: 2.2rem 0 0 1rem; 
     }
 
-    .header h1 {
-        font-size: 1.5rem;
+    header a,
+    header a:visited {
+        font-family: var(--headings-font);
+        font-size: var(--font-size-md);
+        font-weight: 700;
+        line-height: 1.1;
         color: var(--color-nav-highlight-fg);
+        text-decoration: none;
     }
 
     .label {
