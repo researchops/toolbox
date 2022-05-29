@@ -1,6 +1,8 @@
 <script>
 	import PageBottomNav from '~/components/PageBottomNav.svelte';
 	import SideNav from '~/components/SideNav.svelte';
+	import Nav from '~/components/Nav.svelte';
+	import Footer from '~/components/Footer.svelte';
 	import SEO from '~/components/SEO.svelte';
 
 	export let theme = 'plasma';
@@ -10,16 +12,25 @@
 
 <SEO page_title={title} />
 
-<div class="page-container {theme} layout container">
-	<div class="layout-sidenav">
+<div class="page-container {theme} layout">
+	
+	<div class="logo-wrap">
+		<Nav />
+	</div>
+
+	<div class="site-nav-wrap">
 		<SideNav current_toc={_toc} />
 	</div>
 
-	<div id="main-content" class="layout-content">
+	<div id="main-content" class="layout-content-wrap">
 		<h1>{title}</h1>
 		<slot />
 		<hr />
 		<PageBottomNav />
+	</div>
+
+	<div class="footer-wrap">
+		<Footer />
 	</div>
 </div>
 
@@ -45,19 +56,33 @@
 
 	@media (min-width: 420px) {
 		.layout {
-			display: flex;
-			gap: 4rem;
+			display: grid;
+			grid-template-columns: 270px 1fr;
+			grid-template-areas:
+				'logo main'
+				'nav main'
+				'footer footer';
 		}
 
-		.layout-content {
-			flex: 1;
+		.logo-wrap {
+			grid-area: logo;
+			height: 50px;
+			margin-left: 1rem;
 		}
 
-		.layout-sidenav {
-			width: 25%;
-			align-self: flex-start;
-			top: 0;
-			position: sticky;
+		.site-nav-wrap {
+			grid-area: nav;
+			height: calc(100vh - 50px);
+		}
+
+		.layout-content-wrap {
+			grid-area: main;
+			max-width: 66rem;
+			margin: auto;
+		}
+
+		.footer-wrap {
+			grid-area: footer;
 		}
 	}
 </style>
