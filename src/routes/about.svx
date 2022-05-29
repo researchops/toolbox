@@ -2,6 +2,10 @@
 title: About the project
 ---
 
+<script>
+    import Note from '~/components/Note.svelte';
+</script>
+
 ## What were our goals for the toolbox?
 
 * Focus on digital tools (exclude field research, lab and ethnographic equipment) to answer:
@@ -28,9 +32,7 @@ One core principle of this project is to embrace the iterative and collaborative
 
 <blockquote>
 
-What do researchers and ReOps folks need from a toolbox? 
- 
-&
+What do researchers and ReOps folks need from a toolbox? And
 
 How do we provide a toolbox that meets the needs of the community? 
 
