@@ -50,6 +50,7 @@
 	.nav {
 		max-height: 100vh;
 		padding-bottom: 2rem;
+		margin-bottom: 6rem;
 		overflow-y: scroll;
 	}
 

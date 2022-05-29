@@ -14,25 +14,24 @@
 
 <div class="page-container {theme} layout">
 	
-	<div class="logo-wrap">
+	<aside>
 		<Nav />
-	</div>
 
-	<div class="site-nav-wrap">
 		<SideNav current_toc={_toc} />
-	</div>
 
-	<div id="main-content" class="layout-content-wrap">
+	</aside>
+
+	<main id="main-content" class="layout-content-wrap">
 		<h1>{title}</h1>
 		<slot />
 		<hr />
 		<PageBottomNav />
-	</div>
+	</main>
 
-	<div class="footer-wrap">
-		<Footer />
-	</div>
 </div>
+
+<Footer />
+
 
 <style>
 	.page-container:global(.plasma) {
@@ -58,31 +57,21 @@
 		.layout {
 			display: grid;
 			grid-template-columns: 270px 1fr;
-			grid-template-areas:
-				'logo main'
-				'nav main'
-				'footer footer';
 		}
 
-		.logo-wrap {
-			grid-area: logo;
-			height: 50px;
-			margin-left: 1rem;
+		aside {
+			position: sticky;
+			height: 100vh;
+			top: 0;
 		}
 
 		.site-nav-wrap {
-			grid-area: nav;
 			height: calc(100vh - 50px);
 		}
 
 		.layout-content-wrap {
-			grid-area: main;
-			max-width: 66rem;
+			max-width: 48rem;
 			margin: auto;
-		}
-
-		.footer-wrap {
-			grid-area: footer;
 		}
 	}
 </style>

@@ -6,7 +6,7 @@
 
 <style>
     .header {
-        margin: 1rem 0 0;
+        margin: 2rem 0 0 1rem;
     }
 
     .header h1 {
