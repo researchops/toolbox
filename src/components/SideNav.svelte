@@ -48,9 +48,7 @@
 	}
 
 	.nav {
-		max-height: 100vh;
-		padding-bottom: 2rem;
-		margin-bottom: 6rem;
+		max-height: 90vh;
 		overflow-y: scroll;
 	}
 
@@ -58,7 +56,7 @@
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
-		margin-top: 1.25rem;
+		margin-bottom: 4rem;
 	}
 
 	.nav-item {
