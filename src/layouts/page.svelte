@@ -13,15 +13,16 @@
 <SEO page_title={title} />
 
 <div class="page-container {theme} layout">
-	
+
 	<aside>
+
 		<Nav /> 
 
 		<SideNav current_toc={_toc} />
 
 	</aside>
 
-	<main id="main-content" class="layout-content-wrap">
+	<main id="main" class="layout-content-wrap">
 		<h1>{title}</h1>
 		<slot />
 		<hr />
@@ -51,6 +52,10 @@
 
 	:global(html) {
 		scroll-behavior: smooth;
+	}
+
+	main {
+		padding: 0 1rem;
 	}
 
 	@media (min-width: 420px) {
