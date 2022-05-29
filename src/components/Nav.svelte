@@ -1,11 +1,12 @@
 <header class="header">
-    <h1>Re+Ops Tools Census <small class="label">Sandbox</small></h1>
+    <h1>Re+Ops Tools Census 
+    <!-- <small class="label">Sandbox</small> -->
+    </h1>
 </header>
 
 <style>
     .header {
-        text-align: center;
-        margin: 3rem 0;
+        margin: 2rem 0 0 1rem; 
     }
 
     .header h1 {
