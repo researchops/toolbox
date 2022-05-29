@@ -55,22 +55,28 @@ h1 {
 
 h2 {
 	font-size: var(--font-size-md);
+}
+
+h2, h3 {
 	margin: 2.4rem 0 .8rem;
 }
 
-main p {
-	margin: 0;
-}
+p, ul, ol {
+	margin: 0px 0px 20px;
+  }
 
 blockquote {
 	font-family: var(--headings-font);
 	font-variation-settings: "wght" 500;
+	color: var(--color-midnight-80);
 	text-transform: uppercase;
 	text-align: center;
+	margin: 2rem;
 }
 
 blockquote p {
 	font-size: var(--font-size-md);
+	line-height: 1.1;
 }
 
 small {
