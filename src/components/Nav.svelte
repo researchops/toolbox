@@ -5,7 +5,7 @@
 
 <style>
     .header {
-        margin: 2rem 0 0 1rem; 
+        margin: 2.2rem 0 0 1rem; 
     }
 
     header a,

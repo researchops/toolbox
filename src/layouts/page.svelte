@@ -62,6 +62,7 @@
 		.layout {
 			display: grid;
 			grid-template-columns: 270px 1fr;
+			gap: 2rem;
 		}
 
 		aside {
