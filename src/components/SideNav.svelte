@@ -56,7 +56,7 @@
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
-		margin-bottom: 4rem;
+		margin-bottom: 8rem;
 	}
 
 	.nav-item {
