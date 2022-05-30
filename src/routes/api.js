@@ -83,17 +83,26 @@ export async function post({ request }) {
 			const cleaned_full = remove_empties(full, ...field_names);
 			const transformed_full = transform(cleaned_full, ...field_names);
 
-			const merged = {};
-			Object.entries(transformed_full).forEach(([field, full]) => {
-				const filtered = transformed_filtered[field] || {
-					count: 0,
-					percent: 0.0
-				};
-				merged[field] = {
-					full,
-					filtered
-				};
-			});
+			let merged = {};
+
+			if (type === 'sankey') {
+				merged = {
+					filtered: transformed_filtered,
+					full: transformed_full,
+				}
+
+			} else {
+				Object.entries(transformed_full).forEach(([field, full]) => {
+					const filtered = transformed_filtered[field] || {
+						count: 0,
+						percent: 0.0
+					};
+					merged[field] = {
+						full,
+						filtered
+					};
+				});
+			}
 			data[id] = {
 				field_name: id,
 				completion_percentage:

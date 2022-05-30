@@ -107,8 +107,6 @@ export function sankey(
 	// A unique identifier for clip paths (to avoid conflicts).
 	const uid = `O-${Math.random().toString(16).slice(2)}`;
 
-	d3.select(rootID).select('svg').remove();
-
 	const svg = d3
 		.select(rootID)
 		.append('svg')

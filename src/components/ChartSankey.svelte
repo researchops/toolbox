@@ -1,12 +1,20 @@
 <script>
 	import { afterUpdate } from 'svelte';
 	import { sankey } from './chart-sankey-d3';
+	import { mode } from '~/ui.store';
 
 	export let config;
 	let width;
-	$: data = config.data;
+
+	/** @type HTMLElement */
+	let container;
+	$: data = config.data[$mode];
 
 	afterUpdate(() => {
+		const svg = container.querySelector('svg')
+		if (svg) {
+			container.removeChild(svg);
+		}
 		if (data.length <= 0) return;
 		sankey(
 			{
@@ -24,6 +32,6 @@
 	});
 </script>
 
-<div bind:clientWidth={width} id="svg-root" />
+<div bind:this={container} bind:clientWidth={width} id="svg-root" />
 
 <small>Data point with 1 connection is not included.</small>
