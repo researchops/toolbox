@@ -2,6 +2,10 @@
 title: About the project
 ---
 
+<script>
+    import Note from '~/components/Note.svelte';
+</script>
+
 ## What were our goals for the toolbox?
 
 * Focus on digital tools (exclude field research, lab and ethnographic equipment) to answer:
@@ -28,9 +32,7 @@ One core principle of this project is to embrace the iterative and collaborative
 
 <blockquote>
 
-What do researchers and ReOps folks need from a toolbox? 
- 
-&
+What do researchers and ReOps folks need from a toolbox? And
 
 How do we provide a toolbox that meets the needs of the community? 
 
@@ -78,7 +80,7 @@ We’ve only just begun! After launching our Toolbox MVP in June, we plan to tak
 * Benchmarking website usability (and making improvements based on those findings)
 * Continuous data collection
 
-We plan to release quarterly updates. If you want to see what we have on the roadmap and how we’re doing on it, check out our [project roadmap](https://airtable.com/shrY8frhGknYfiR2x). 
+We plan to release quarterly updates. If you want to see what we have on the roadmap and how we’re doing on it, check out our [project roadmap](https://airtable.com/shrY8frhGknYfiR2x) and review our [Github repository](https://github.com/researchops/toolbox).
 
 See something on the roadmap that you’d like to help us work on? Email us at tools(dot)census(at)researchops(dot)community or send us a message through our [feedback form](https://airtable.com/shrK5MQBUElp9xjLs)
 
@@ -90,4 +92,4 @@ This project started from a simple question “what are people using now?” and
 
 Thank you for your continuing support and we’re always looking forward to the next release of improvements!
 
-Andy, Caro, and Derek
+_Andy, Caro, and Derek_

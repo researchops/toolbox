@@ -1,6 +1,4 @@
-
-🧰
-
+![Illustrated toolbox covered in technology stickers](https://github.com/researchops/toolbox/blob/dev/static/toolbox-dev.png?raw=true)
 
 # ResearchOps Toolbox
 
@@ -20,8 +18,8 @@ If you have any feedback or would like to get involved, you can fill out a conta
 
 - A snappy front-end framework [SvelteKit](https://kit.svelte.dev/)
 - Deployment on [Cloudflare](https://www.cloudflare.com/)
-    
-
+- [Airtable](https://www.airtable.com/) database 
+- [Figma](figma.com/) mockups and graphics    
 
 ## Quick start
 
@@ -43,6 +41,7 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
 ## Contributing
 
 Make a pull request.
