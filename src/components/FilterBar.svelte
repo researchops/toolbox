@@ -21,6 +21,7 @@
 				<li>
 					<FilterPill
 						text={value}
+						disabled={$mode === 'full'}
 						on:click={handle_remove_filter({ field_name, value })}
 					/>
 				</li>
@@ -38,9 +39,11 @@
 		{#if $state === 'loading'}
 			<span>loading...</span>
 		{/if}
-		<span class="filter-info-match"
-			>{$participant_count} participants match</span
-		>
+		{#if $mode === 'filtered'}
+			<span class="filter-info-match"
+				>{$participant_count} participants match</span
+			>
+		{/if}
 		<button class="filter-btn-clear" on:click={handle_clear_filter}
 			>Clear all filters</button
 		>
