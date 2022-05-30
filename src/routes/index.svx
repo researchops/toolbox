@@ -25,7 +25,7 @@ This is made by researchers & ReOps-ers, for researchers & ReOps-ers. This is a 
 
 <Note type="download">
 
-We wanted to make sure the data and data collection process is transparent and open-access. 
+We want to make sure the data and data collection process is transparent and open-access. 
 
 [View and download the census data](https://airtable.com/shrPD7PYR2sekvmAB/tbll8aovHGrYUfqZo)
 
