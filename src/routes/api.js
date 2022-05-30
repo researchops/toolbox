@@ -26,10 +26,10 @@ export async function post({ request }) {
 
 	let dataset;
 	let participant_count;
+
+	const url = import.meta.env.CF_PAGES_URL;
 	if (mode === 'production') {
-		dataset = await fetch('https://toolbox-8w7.pages.dev/data.json').then(
-			(res) => res.json()
-		);
+		dataset = await fetch(`${url}/data.json`).then((res) => res.json());
 	} else {
 		dataset = await import('~/data/data-loader').then((res) => res.default);
 	}
