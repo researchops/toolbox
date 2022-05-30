@@ -48,8 +48,8 @@ const sankey = (data, from_name = 'field_0', to_name = 'field_1') => {
 	const separator = '::::';
 	let result = {};
 	data.forEach((entry) => {
-		const from = entry[from_name]
-		const to = entry[to_name]
+		const from = entry[from_name];
+		const to = entry[to_name];
 		if (!from || !to) return;
 		from.forEach((source) => {
 			to.forEach((target) => {
