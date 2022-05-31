@@ -1,0 +1,70 @@
+---
+title: Error 500
+---
+
+Error loading data. Please try refreshing your browser.
+
+<figure class="meme">
+    <picture>
+        <source srcset="./making-it.webp" type="image/webp">
+        <source srcset="./making-it.jpg" type="image/jpeg"> 
+        <img src="./making-it.jpg" alt="Two crafty people sitting on a front porch">
+    </picture>
+    <figcaption>
+        Looks like we both bit off more than we can glue
+    </figcaption>
+</figure>
+
+---
+
+# Error 404
+
+We can’t find the page your looking for. Please try again or navigate [back home](/).  
+
+<figure class="meme">
+    <picture>
+        <source srcset="./more-power.webp" type="image/webp">
+        <source srcset="./more-power.jpg" type="image/jpeg"> 
+        <img src="./more-power.jpg" alt="two men in a workshop holding power tools">
+    </picture>
+    <figcaption>
+
+        You know what we need?
+        
+        More Power!
+
+    </figcaption>
+</figure>
+
+<style>
+
+    figure.meme {
+        position: relative;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    figure.meme picture img {
+        max-width: 100%;
+    }
+
+    figure.meme figcaption {
+        position: absolute;
+        bottom: 2rem;
+        width: 100%;
+        font-family: impact, sans-serif;
+        text-transform: uppercase;
+        font-size: var(--font-size-lg);
+        letter-spacing: 0.0425em;
+        line-height: 1.1;
+        padding: 0 1rem;
+        color: white;
+        text-shadow:
+            -3px -3px 0 #000,  
+             3px -3px 0 #000,
+            -3px  3px 0 #000,
+             3px  3px 0 #000;
+    }
+
+</style>
