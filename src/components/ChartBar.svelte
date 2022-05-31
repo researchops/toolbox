@@ -145,6 +145,7 @@
 		display: flex;
 		gap: 0.25rem;
 		align-items: center;
+		margin-bottom: 1.5rem;
 	}
 
 	.input-limit {
