@@ -83,9 +83,6 @@ export const chart_config = {
 	experience: {
 		type: 'single'
 	},
-	company_type: {
-		type: 'single'
-	},
 	maturity: {
 		type: 'single'
 	},
