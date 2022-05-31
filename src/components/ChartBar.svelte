@@ -2,6 +2,7 @@
 	import * as filter from '~/filters';
 	import { sort_helpers } from './chart-bar-utils';
 	import { session } from '$app/stores';
+	import { mode } from '~/ui.store';
 
 	export let config;
 	export let filterable = false;
@@ -14,6 +15,9 @@
 	$: completion_percentage = config.completion_percentage;
 	$: sorter = sort_helpers[sort_type];
 	$: filter_applied = $session.filters?.length > 0 || false;
+	$: display_data = Object.entries(data)
+		.filter(([_, value]) => value.full.percent >= limit)
+		.sort(sorter);
 
 	const handle_filter = (value) => () => {
 		filter.add({ field_name, value });
@@ -42,17 +46,17 @@
 			/>
 		</div>
 	</div>
+	
 	<ul class="bar-list-container">
-		{#each Object.entries(data)
-			.filter(([_, value]) => value.percent >= limit)
-			.sort(sorter) as [name, value], i (i)}
-			<li class="bar-item" style="--js-value:{value.percent/100}">
+		{#each display_data as [name, value], i (i)}
+			{@const percent = value[$mode].percent}
+			<li class="bar-item" style="--js-value:{percent / 100}">
 				<div class="bar-group">
 					<div class="bar-label">
 						<span class="bar-name">{name}</span>
 						<span class="bar-divider">{' - '}</span>
 						<span class="bar-value">
-							{value.percent}%
+							{percent}%
 							{#if i === 0}
 								of {unit}
 							{/if}

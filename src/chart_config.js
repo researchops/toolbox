@@ -1,8 +1,8 @@
 import group_by from 'lodash-es/groupBy';
 
-const group = (data) => {
+const group = (data, field_name = 'field_0') => {
 	let total = data.length;
-	let grouped = group_by(data, ({ field_0 }) => field_0);
+	let grouped = group_by(data, (item) => item[field_name]);
 	let result = {};
 	for (let key in grouped) {
 		let count = grouped[key].length;
@@ -15,14 +15,14 @@ const group = (data) => {
 	return result;
 };
 
-const group_in = (data) => {
+const group_in = (data, field_name = 'field_0') => {
 	let total = data.length;
 
 	const grouped = data.reduce((acc, cur) => {
-		const { field_0 } = cur;
-		if (!field_0) return acc;
+		const field_values = cur[field_name];
+		if (!field_values) return acc;
 
-		field_0.forEach((value) => {
+		field_values.forEach((value) => {
 			if (acc[value] == undefined) {
 				acc[value] = 1;
 			} else {
@@ -44,11 +44,12 @@ const group_in = (data) => {
 	return result;
 };
 
-const sankey = (data) => {
+const sankey = (data, from_name = 'field_0', to_name = 'field_1') => {
 	const separator = '::::';
 	let result = {};
 	data.forEach((entry) => {
-		const { field_0: from, field_1: to } = entry;
+		const from = entry[from_name];
+		const to = entry[to_name];
 		if (!from || !to) return;
 		from.forEach((source) => {
 			to.forEach((target) => {

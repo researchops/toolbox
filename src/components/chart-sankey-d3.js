@@ -33,7 +33,7 @@ export function sankey(
 		linkTitle = (d) =>
 			`${d.source.id} → ${d.target.id}\n${format(d.value)}`, // given d in (computed) links
 		linkColor = 'source-target', // source, target, source-target, or static color
-		linkStrokeOpacity = 0.5, // link stroke opacity
+		linkStrokeOpacity = 0.75, // link stroke opacity
 		linkMixBlendMode = 'multiply', // link blending mode
 		colors = d3.schemeTableau10, // array of colors
 		width = 640, // outer width, in pixels
@@ -106,8 +106,6 @@ export function sankey(
 
 	// A unique identifier for clip paths (to avoid conflicts).
 	const uid = `O-${Math.random().toString(16).slice(2)}`;
-
-	d3.select(rootID).select('svg').remove();
 
 	const svg = d3
 		.select(rootID)
