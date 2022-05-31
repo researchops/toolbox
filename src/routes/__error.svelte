@@ -21,10 +21,10 @@
 
 		<figure class="meme">
 			<picture>
-				<source srcset="./making-it.webp" type="image/webp" />
-				<source srcset="./making-it.jpg" type="image/jpeg" />
+				<source srcset="/making-it.webp" type="image/webp" />
+				<source srcset="/making-it.jpg" type="image/jpeg" />
 				<img
-					src="./making-it.jpg"
+					src="/making-it.jpg"
 					alt="Two crafty people sitting on a front porch, with the caption 'Looks like we both bit off more than we can glue'"
 				/>
 			</picture>
@@ -41,10 +41,10 @@
 
 		<figure class="meme">
 			<picture>
-				<source srcset="./more-power.webp" type="image/webp" />
-				<source srcset="./more-power.jpg" type="image/jpeg" />
+				<source srcset="/more-power.webp" type="image/webp" />
+				<source srcset="/more-power.jpg" type="image/jpeg" />
 				<img
-					src="./more-power.jpg"
+					src="/more-power.jpg"
 					alt="two men in a workshop holding power tools, with the caption 'You know what we need? More power!'"
 				/>
 			</picture>
