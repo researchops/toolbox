@@ -117,10 +117,10 @@ export function sankey(
 
 	const node = svg
 		.append('g')
-		.attr('stroke', nodeStroke)
-		.attr('stroke-width', nodeStrokeWidth)
-		.attr('stroke-opacity', nodeStrokeOpacity)
-		.attr('stroke-linejoin', nodeStrokeLinejoin)
+		// .attr('stroke', nodeStroke)
+		// .attr('stroke-width', nodeStrokeWidth)
+		// .attr('stroke-opacity', nodeStrokeOpacity)
+		// .attr('stroke-linejoin', nodeStrokeLinejoin)
 		.selectAll('rect')
 		.data(nodes)
 		.join('rect')

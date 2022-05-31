@@ -10,7 +10,16 @@
 	let container;
 	$: data = config.data[$mode];
 
-	const nodeLabel = ({ id }) => id.substring(0, id.length - 2)
+	const nodeLabel = ({ id }) => id.substring(0, id.length - 2);
+	const linkTitle = (d) => {
+		let source_id = d.source.id
+		let target_id = d.target.id
+		let value = d.value
+		let source = source_id.substring(0, source_id.length - 2)
+		let target = target_id.substring(0, target_id.length - 2)
+
+		return `${value} researchers in ${source} conduct research in ${target}`
+	}
 
 	afterUpdate(() => {
 		const svg = container.querySelector('svg');
@@ -27,6 +36,7 @@
 				nodeAlign: 'right',
 				nodeLabel,
 				linkColor: 'source-target',
+				linkTitle,
 				width,
 				height: Math.max(500, data.length * 7),
 				rootID: '#svg-root',
