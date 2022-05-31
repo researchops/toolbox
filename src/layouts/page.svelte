@@ -2,7 +2,6 @@
 	import PageBottomNav from '~/components/PageBottomNav.svelte';
 	import SideNav from '~/components/SideNav.svelte';
 	import Nav from '~/components/Nav.svelte';
-	import Footer from '~/components/Footer.svelte';
 	import SEO from '~/components/SEO.svelte';
 
 	export let theme = 'plasma';
@@ -30,8 +29,6 @@
 	</main>
 
 </div>
-
-<Footer />
 
 
 <style>
