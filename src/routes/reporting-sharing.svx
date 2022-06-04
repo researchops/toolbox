@@ -1,0 +1,54 @@
+---
+title: Reporting & Sharing
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['sharing_findings', 'infographics', 'storytelling', 'research_repo', 'insight_repo'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+</script>
+
+## Sharing findings
+
+How do researchers inform stakeholders and team mates of the research findings.
+
+<ChartBar config={data.sharing_findings} />
+
+---
+
+## Infographics &amp; data visualization
+
+How do researchers present their data.
+
+<ChartBar config={data.infographics} />
+
+---
+
+## Storytelling & presentations
+
+<ChartBar config={data.storytelling} />
+
+---
+
+## Research repositories
+
+A research repository is a shared collection of UX-research-related elements that should support the following functions at the organization level: grow UX awareness and participation in UX work among leadership, product owners, and the organization at large.
+
+Source: Kara Pernice, ["Research Repositories for Tracking UX Research and Growing Your ResearchOps"](https://www.nngroup.com/articles/research-repositories/)
+
+<ChartBar config={data.research_repo} />
+
+---
+
+## Insights repositories
+
+Much like a research repository, but specifically for *insights* that are derived from research projects. 
+
+<ChartBar config={data.insight_repo} />

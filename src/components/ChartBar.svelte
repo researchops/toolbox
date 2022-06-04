@@ -2,6 +2,7 @@
 	import * as filter from '~/filters';
 	import { sort_helpers } from './chart-bar-utils';
 	import { session } from '$app/stores';
+	import { mode } from '~/ui.store';
 
 	export let config;
 	export let filterable = false;
@@ -14,6 +15,9 @@
 	$: completion_percentage = config.completion_percentage;
 	$: sorter = sort_helpers[sort_type];
 	$: filter_applied = $session.filters?.length > 0 || false;
+	$: display_data = Object.entries(data)
+		.filter(([_, value]) => value.full.percent >= limit)
+		.sort(sorter);
 
 	const handle_filter = (value) => () => {
 		filter.add({ field_name, value });
@@ -24,10 +28,12 @@
 	<div class="button-groups">
 		<button
 			class:active={sort_type === 'alphabet'}
+			aria-selected={sort_type === 'alphabet'}
 			on:click={() => (sort_type = 'alphabet')}>Alphabetical</button
 		>
 		<button
 			class:active={sort_type === 'popularity'}
+			aria-selected={sort_type === 'popularity'}
 			on:click={() => (sort_type = 'popularity')}>Popularity</button
 		>
 		<div>
@@ -40,17 +46,17 @@
 			/>
 		</div>
 	</div>
+	
 	<ul class="bar-list-container">
-		{#each Object.entries(data)
-			.filter(([_, value]) => value.percent >= limit)
-			.sort(sorter) as [name, value], i (i)}
-			<li class="bar-item" style="--js-value:{value.percent/100}">
+		{#each display_data as [name, value], i (i)}
+			{@const percent = value[$mode].percent}
+			<li class="bar-item" style="--js-value:{percent / 100}">
 				<div class="bar-group">
 					<div class="bar-label">
 						<span class="bar-name">{name}</span>
 						<span class="bar-divider">{' - '}</span>
 						<span class="bar-value">
-							{value.percent}%
+							{percent}%
 							{#if i === 0}
 								of {unit}
 							{/if}
@@ -112,7 +118,7 @@
 		position: relative;
 		width: 100%;
 		height: 1.125rem;
-		background-color: var(--color-chart-bar-bg);
+		background-color: var(--color-theme-bg);
 	}
 
 	.bar-fg {
@@ -123,7 +129,7 @@
 		height: 100%;
 		transform-origin: center left;
 		transform: scaleX(var(--js-value, 0.1));
-		background-color: var(--color-chart-bar-fg);
+		background-color: var(--color-theme-fg);
 		transition: transform 0.3s ease;
 	}
 
@@ -139,6 +145,7 @@
 		display: flex;
 		gap: 0.25rem;
 		align-items: center;
+		margin-bottom: 1.5rem;
 	}
 
 	.input-limit {
@@ -153,8 +160,8 @@
 	}
 
 	.button-groups button.active {
-		background-color: var(--color-chart-bar-bg);
-		color: var(--color-chart-bar-fg);
-		border-bottom: 1px solid var(--color-chart-bar-fg);
+		background-color: var(--color-theme-bg);
+		color: var(--color-theme-fg);
+		border-bottom: 1px solid var(--color-theme-fg);
 	}
 </style>

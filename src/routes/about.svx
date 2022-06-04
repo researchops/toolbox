@@ -2,6 +2,10 @@
 title: About the project
 ---
 
+<script>
+    import Note from '~/components/Note.svelte';
+</script>
+
 ## What were our goals for the toolbox?
 
 * Focus on digital tools (exclude field research, lab and ethnographic equipment) to answer:
@@ -26,9 +30,13 @@ Anyone can use this, but we built this with four core user groups in mind.
 
 One core principle of this project is to embrace the iterative and collaborative nature of design. With that, we knew that we needed to start from a place of curiosity and exploration. We based our main research around the questions: 
 
-<blockquote>What do researchers and ReOps folks need from a toolbox? 
-/&
-<p> How do we provide a toolbox that meets the needs of the community? </blockquote>
+<blockquote>
+
+What do researchers and ReOps folks need from a toolbox? And
+
+How do we provide a toolbox that meets the needs of the community? 
+
+</blockquote>
 
 These are no easy questions. 
 
@@ -39,44 +47,42 @@ Being UX practitioners, we did what UX-ers do best: design, test, design again.
 ### Competitive analysis
 We knew we wanted more than a database, but didn’t know where to start. Andy, the project design lead, completed a competitive analysis using sites like [The State of CSS](https://stateofcss.com/), [The State of Javascript](https://stateofjs.com/), [USA facts dot org](https://usafacts.org/), and the [Feltron Annual Report](http://feltron.com/FAR13.html), to draw design inspiration and ideas.
 
-### Generative research (n=11)
+### Generative research 
 
-To test if we built the right thing, we conducted cognitive walkthroughs using rough draft wireframes. We worked with 11 UX researchers and Research Ops specialists from four continents and eight countries to uncover design issues, mismatches with mental models, and overall work to improve the design. In addition to the cognitive walkthroughs we interviewed participants about their daily work and recent experiences with tool selection. (Thank you, participants!!)
+To test if we built the right thing, we conducted cognitive walkthroughs using rough draft wireframes. Over the course of a month, we worked with **11 UX researchers and Research Ops specialists** from **four continents** and **eight countries** to uncover design issues, mental model mismatches, and overall work to improve the design. In addition to the cognitive walkthroughs we interviewed participants about their daily work and recent experiences with tool selection. (Thank you, participants!!)
 
-### Card sort (n=60)
+### Card sort 
 With the cognitive walkthroughs complete, we soon realized that what we thought of as “logical groupings” of tasks throughout the research process were probably not reflective of the overall community’s understanding. 
 
-Using tasks brought up through the interview and cognitive walkthroughs, in addition to common research tasks and methods found throughout the UX research and Research Ops literature, we conducted an open card sort with participants recruited from the ReOps Slack community (total of 60 participants). 
+Using tasks brought up through the interview and cognitive walkthroughs, in addition to common research tasks and methods found throughout the UX research and Research Ops literature, we conducted an open card sort with participants recruited from the ReOps Slack community (total of **60 participants** over a two week timeframe). 
 
-Ultimately, the data showed eight distinct groups of tools/task categories, which mapped onto six phases of the research and research ops lifecycle. These findings informed the structure of the census questionnaire, as well as the toolbox layout itself.
+Ultimately, the data showed **eight distinct groups** of tools/task categories, which mapped onto **six phases of the research and research ops lifecycle**. These findings informed the structure of the census questionnaire, as well as the toolbox layout itself.
 
-### Questionnaire pilot (n=31)
-It was time to collect data. In true iterative fashion, we piloted five versions of the census questionnaire with 31 participants across two survey platforms in order to improve the flow, increase efficiency in our data collection, and reduce the cognitive load of the participant.
+### Questionnaire pilot
+It was time to collect data. In true iterative fashion, we piloted five versions of the census questionnaire with **31 participants** across two survey platforms in order to improve the flow, increase efficiency in our data collection, and reduce the cognitive load of the participant.
 
 In addition to demographic questions, we asked open-ended questions about tools that were used for specific research-related tasks. We opted for open-ended questions, rather than multiple select from a list of tools so that we could get a better understanding of the universe of tools used for each task. The answers from the initial survey informed the survey going forward, allowing for easier data analysis and quicker turnaround on data availability for the public.
 
 Again, thank you to the 31 folks who helped us iterate and get the census into a shippable condition! 
 
-### Toolbox census (n= 200+)
+### Toolbox census
 
-The toolbox census was officially launched in March 2022 and in its first push collected over 200+ responses from over 39 different countries, with an average completion rate of ##.##% (## starts, ## completions) in an average of 13 minutes and 53 seconds.
+The toolbox census was officially launched in March 2022 and in its first push collected over 200+ responses from over 39 different countries. The typical time to completion was 13 minutes and 53 seconds. (Unfortunately, given the platform limitations, we don't have a start-completion rate.)
 
 We opted for open-text answers to nearly all census questions since we didn’t believe we had a firm understanding of the universe of research tools and didn’t want to exclude any tools or introduce bias into answers.
 
-Since building the toolbox website, we’ve moved the data collection to an (Airtable form)[https://airtable.com/shrW0caILlbxe5UQi], which allows us to provide faster and more consistent updates to the toolbox.
-
-Learn more about the project on our project public information page.
+Since building the toolbox website, we’ve moved the data collection to an [Airtable form](https://airtable.com/shrW0caILlbxe5UQi), which allows us to provide faster and more consistent updates to the toolbox.
 
 ## Future steps
 
 We’ve only just begun! After launching our Toolbox MVP in June, we plan to take a much deserved and needed break before we jump back in and build out the next features which include, but aren’t limited to:
-* Adding information (such as features, capabilities, and integrations) of tools
-* Benchmarking website usability (and making improvements)
+* Adding information about the tools (such as features, capabilities, and integrations)
+* Benchmarking website usability (and making improvements based on those findings)
 * Continuous data collection
 
-We plan to release quarterly updates. If you want to see what we have on the roadmap and how we’re doing on it, check out our [project roadmap](https://airtable.com/shrY8frhGknYfiR2x). 
+We plan to release quarterly updates. If you want to see what we have on the roadmap and how we’re doing on it, check out our [project roadmap](https://airtable.com/shrY8frhGknYfiR2x) and review our [Github repository](https://github.com/researchops/toolbox).
 
-See something on the roadmap that you’d like to help us work on? Email us at tools(dot)census(at)researchops(dot)community or send 
+See something on the roadmap that you’d like to help us work on? Email us at tools(dot)census(at)researchops(dot)community or send us a message through our [feedback form](https://airtable.com/shrK5MQBUElp9xjLs)
 
 Have feedback or requests for improvements? Let us know through our [feedback form](https://airtable.com/shrK5MQBUElp9xjLs)
 
@@ -86,4 +92,4 @@ This project started from a simple question “what are people using now?” and
 
 Thank you for your continuing support and we’re always looking forward to the next release of improvements!
 
-Andy, Caro, and Derek
+_Andy, Caro, and Derek_

@@ -1,5 +1,7 @@
 <script>
 	import { sort_helpers } from './chart-bar-utils';
+	import { mode } from '~/ui.store';
+
 	export let config;
 	export let limit = 12;
 
@@ -11,7 +13,7 @@
 		.sort(sort_helpers.popularity)
 		.filter((_, i) => i < limit) as [name, value], i (i)}
 		<li class="chunky-item">
-			<div class="chunky-text">{value.percent}%</div>
+			<div class="chunky-text">{value[$mode].percent}%</div>
 			<div>{name}</div>
 		</li>
 	{/each}

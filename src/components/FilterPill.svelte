@@ -1,8 +1,9 @@
 <script>
 	export let text = 'Missing value';
+	export let disabled = false;
 </script>
 
-<button aria-label="Remove {text}" on:click class="pill-container">
+<button aria-label="Remove {text}" on:click class="pill-container" {disabled}>
 	{text}
 	<svg
 		class="pill-remove"
@@ -66,5 +67,15 @@
 
 	.pill-container:focus .pill-remove {
 		color: var(--color-site-bg);
+	}
+
+	.pill-container[disabled] {
+		border: 2px solid var(--color-midnight-100);
+		background-color: var(--color-midnight-40);
+		color: var(--color-midnight-100);
+	}
+
+	.pill-container[disabled] .pill-remove {
+		color: var(--color-midnight-100);
 	}
 </style>

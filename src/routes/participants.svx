@@ -1,0 +1,43 @@
+---
+title: Participant Info
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['expertise', 'experience', 'responsibilities'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+	import Chunky from '~/components/Chunky.svelte';
+    import Note from '~/components/Note.svelte';
+	import { session } from '$app/stores';
+
+	export let data;
+
+    $: expertise = data.expertise
+    $: experience = data.experience
+	$: responsibilities = data.responsibilities
+</script>
+
+## Discipline
+
+Our survey respondents mostly described their areas of expertise.
+
+<ChartBar config={expertise} filterable />
+
+---
+
+## Experience
+
+Our survey respondents mostly described their areas of expertise.
+
+<ChartBar config={experience} filterable />
+
+---
+
+## Responsibilities
+
+Those participants who identified as research and/or research operations marked the following as their main job role/responsibilities.
+
+<Chunky config={responsibilities} />

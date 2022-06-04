@@ -1,0 +1,70 @@
+---
+title: Design & Collaboration
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['collaborative_brainstorming', 'diagramming_mapping', 'participatory_design', 'creating_wireframes', 'mockups', 'prototyping'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+</script>
+
+## Collaborative brainstorming
+
+For brainstorming and collaboration work (virtual and/or in person)
+
+<ChartBar config={data.collaborative_brainstorming} />
+
+---
+
+## Diagramming and mapping
+
+Creating diagrams and maps (workflows, journey maps, entity diagrams, etc.)
+
+<ChartBar config={data.diagramming_mapping} />
+
+---
+
+## Participatory design
+
+An approach to design that invites all stakeholders (e.g. customers, employees, partners, citizens, consumers) into the design process as a means of better understanding, meeting, and sometimes preempting their needs.
+
+Source: Olga Elizarova & Kimberly Dowd, ["Participatory Design in Practice"](https://uxmag.com/articles/participatory-design-in-practice)
+
+<ChartBar config={data.participatory_design} />
+
+---
+
+## Wireframing
+
+Process where designers draw overviews of interactive products to establish the structure and flow of possible design solutions. A good way to think of it is that a wireframe is a blueprint and a mockup is a visual model.
+
+Source: Lucid Content Team, ["Wireframes vs mockups: Determining the right level of fidelity for your project"](https://www.lucidchart.com/blog/wireframes-vs-mockups)
+
+<ChartBar config={data.creating_wireframes} />
+
+---
+
+## Mockups
+
+Static wireframe that includes more stylistic and visual UI details to present a realistic model of what the final page or application will look like. A good way to think of it is that a wireframe is a blueprint and a mockup is a visual model.
+
+Source: Lucid Content Team, ["Wireframes vs mockups: Determining the right level of fidelity for your project"](https://www.lucidchart.com/blog/wireframes-vs-mockups)
+
+<ChartBar config={data.mockups} />
+
+---
+
+## Prototyping
+
+A simulation or sample version of a final product, which UX teams use for testing before launch.
+
+Source: UXPin, ["What Is a Prototype: A Guide to Functional UX"](https://www.uxpin.com/studio/blog/what-is-a-prototype-a-guide-to-functional-ux)
+
+<ChartBar config={data.prototyping} />

@@ -1,0 +1,82 @@
+---
+title: Recruiting & Participant Management
+theme: ocean
+---
+
+<script context="module">
+	import { create_loader } from '~/components/page-loader'
+	export const load = create_loader(['participant_recruiting', 'participant_contacting', 'participant_tracking',  'informed_consent', 'participant_incentives', 'participant_relationship_mngt', 'intercept'])
+</script>
+
+<script>
+	import ChartBar from '~/components/ChartBar.svelte';
+	import Chunky from '~/components/Chunky.svelte';
+    import Note from '~/components/Note.svelte';
+
+	export let data;
+
+</script>
+
+## Finding participants
+
+Finding information about people who could participate in research studies.
+
+<ChartBar config={data.participant_recruiting} />
+
+---
+
+## Contacting participants
+
+Reaching out to participants (by it through email, phone, text, Slack, etc.).
+
+<ChartBar config={data.participant_contacting} />
+
+---
+
+## Participant tracking
+
+Keeping track of which participant has taken part in which study, their compensation, etc.
+
+<ChartBar config={data.participant_tracking} />
+
+---
+
+## Informed consent
+
+Administering, collecting, and storing participants&rsquo; informed consent forms.
+
+<ChartBar config={data.informed_consent} />
+
+---
+
+## Participant incentives
+
+Administering and tracking participant compensation/incentive.
+
+<ChartBar config={data.participant_incentives} />
+
+---
+
+## Research customer/participant relationship management
+
+Keeping track communication with participants.
+
+<ChartBar config={data.participant_relationship_mngt} />
+
+---
+
+## Participant scheduling
+
+Scheduling research sessions.
+
+<!-- <ChartBar config={data.participant_scheduling} />  -->
+
+---
+
+## Intercept
+
+An intercept entails approaching people who are engaged in an activity to get their feedback. 
+
+Source: Victor Yocco, ["The Art Of The Intercept: Moving Beyond “Would You Like To Take A Survey?”"](https://www.smashingmagazine.com/2016/02/the-art-of-the-intercept/)
+
+<ChartBar config={data.intercept} />
