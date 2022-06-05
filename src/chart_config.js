@@ -1,4 +1,4 @@
-import group_by from 'lodash-es/groupBy';
+import { groupBy as group_by } from 'lodash-es';
 
 const group = (data, field_name = 'field_0') => {
 	let total = data.length;
