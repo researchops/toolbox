@@ -1,10 +1,6 @@
 <header class="header">
-<<<<<<< HEAD
-    <h1>Re+Ops Tools Census <small class="label">Pre-release</small></h1>
-=======
     <a id="logo" href="/" rel="home">Re+Ops Tools Census</a> 
     <!-- <small class="label">Sandbox</small> -->
->>>>>>> dev
 </header>
 
 <style>
