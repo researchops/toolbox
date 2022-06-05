@@ -35,7 +35,7 @@ export async function post(event) {
 			return hashHex;
 		}
 
-		const hash = await sha256({ chart_ids, filters });
+		const hash = await sha256(JSON.stringify({ chart_ids, filters }));
 		const cache_url = new URL(request.url);
 		cache_url.pathname = '/post/' + cache_url.pathname + hash;
 		const cache_key = new Request(cache_url.toString(), {
