@@ -145,10 +145,10 @@ export async function post(event) {
 				}
 			});
 			response = new Response(body, {
-				status: 200,
+				status: 200
 			});
 
-			response.headers.append('Cache-Control', 'max-age=86400')
+			response.headers.append('Cache-Control', 'max-age=86400');
 
 			if (mode === 'production') {
 				event.waitUntil(cache.put(request, response.clone()));
@@ -156,6 +156,7 @@ export async function post(event) {
 		} catch (err) {
 			console.error(err);
 			return {
+				body: JSON.stringify(err),
 				status: 500
 			};
 		}
