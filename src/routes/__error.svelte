@@ -12,12 +12,15 @@
 
 <script>
 	export let status;
+	export let error;
 </script>
 
 <div class="container error-height">
 	{#if status == 500}
 		<h1>Error 500</h1>
 		<p>Error loading data. Please try refreshing your browser.</p>
+
+		<pre style="display: none;">{JSON.stringify(error)}</pre>
 
 		<figure class="meme">
 			<picture>
