@@ -32,15 +32,11 @@ npm run dev
 npm run dev -- --open
 ```
 
-To create a production version of your app:
+To create and run a local Node version of your app:
 
 ```bash
-npm run build
+npm run start
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
 ## Contributing
 
