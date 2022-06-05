@@ -4,7 +4,7 @@ import { state, participant_count } from '~/ui.store';
 export const create_loader =
 	(chart_ids) =>
 	async ({ fetch, session }) => {
-		const res = await fetch('/api', {
+		const res = await fetch('https://api.toolbox-uxr.workers.dev', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
