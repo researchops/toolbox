@@ -7,8 +7,10 @@
 	export let config;
 	export let filterable = false;
 	export let sort_type = 'popularity';
-	export let limit = 5;
+	export let limit = 10;
 	export let unit = 'question respondents';
+
+	let show_all = false;
 
 	$: field_name = config.field_name;
 	$: data = config.data;
@@ -16,8 +18,8 @@
 	$: sorter = sort_helpers[sort_type];
 	$: filter_applied = $session.filters?.length > 0 || false;
 	$: display_data = Object.entries(data)
-		.filter(([_, value]) => value.full.percent >= limit)
-		.sort(sorter);
+		.sort(sorter($mode))
+		.filter((_, i) => (show_all ? true : i < limit));
 
 	const handle_filter = (value) => () => {
 		filter.add({ field_name, value });
@@ -36,17 +38,8 @@
 			aria-selected={sort_type === 'popularity'}
 			on:click={() => (sort_type = 'popularity')}>Popularity</button
 		>
-		<div>
-			<label for="input-limit">Limit</label>
-			<input
-				class="input-limit"
-				id="input-limit"
-				type="number"
-				bind:value={limit}
-			/>
-		</div>
 	</div>
-	
+
 	<ul class="bar-list-container">
 		{#each display_data as [name, value], i (i)}
 			{@const percent = value[$mode].percent}
@@ -75,10 +68,11 @@
 		{/each}
 	</ul>
 
-	{#if limit > 0}
-		<small>
-			Data below {limit}% are not shown.
-		</small>
+	{#if display_data.length >= limit}
+		<label class="input-show-all">
+			<input type="checkbox" bind:checked={show_all} />
+			{show_all ? 'Hide' : 'Show'} less popular answers
+		</label>
 	{/if}
 	{#if !filter_applied}
 		<small
@@ -148,8 +142,19 @@
 		margin-bottom: 1.5rem;
 	}
 
-	.input-limit {
-		width: 48px;
+	.input-show-all {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		color: var(--color-nav-highlight-fg);
+		font-weight: 600;
+		text-decoration: underline;
+	}
+
+	.input-show-all input[type='checkbox'] {
+		appearance: none;
+		opacity: 0;
+		position: absolute;
 	}
 
 	.button-groups button {
