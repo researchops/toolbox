@@ -1,0 +1,59 @@
+// Vitest Snapshot v1
+
+exports[`remove empties / undefined from multi-choice charts 1`] = `
+[
+  {
+    "responsibilities": [
+      "Generalist ",
+      "Research libraries",
+      "Recruitment",
+      "Training and mentoring",
+      "Finance and procurement",
+      "Vendor management and tools",
+      "Taxonomy",
+    ],
+  },
+  {
+    "responsibilities": [
+      "Training and mentoring",
+      "Vendor management and tools",
+    ],
+  },
+  {
+    "responsibilities": [
+      "Training and mentoring",
+      "Vendor management and tools",
+      "Taxonomy",
+    ],
+  },
+]
+`;
+
+exports[`remove empties / undefined from multiple fields 1`] = `
+[
+  {
+    "expertise": [
+      "User or design research",
+    ],
+  },
+  {
+    "experience": "4 - 6 years",
+    "expertise": [
+      "User or design research",
+    ],
+  },
+  {
+    "expertise": [
+      "User or design research",
+    ],
+  },
+]
+`;
+
+exports[`remove empties / undefined from single choice charts 1`] = `
+[
+  {
+    "experience": "4 - 6 years",
+  },
+]
+`;
