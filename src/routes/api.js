@@ -88,6 +88,7 @@ export async function post({ request }) {
 			}
 			data[id] = {
 				field_name: id,
+				type,
 				completion_percentage:
 					Math.round((cleaned_full.length / full.length) * 10000) /
 					100,
@@ -110,52 +111,4 @@ export async function post({ request }) {
 			status: 500
 		};
 	}
-
-	// try {
-	// 	const tasks = chart_ids.map(async (id) => {
-	// 		const { type = 'multiple', field_names = [id] } =
-	// 			chart_config[id] || {};
-	// 		const transform = transform_map[type];
-	// 		const result = await query(
-	// 			dataset,
-	// 			`*[${query_part_filters}] { ${field_names
-	// 				.map((field, i) => `"field_${i}": ${field}`)
-	// 				.join(',')} }`
-	// 		);
-	// 		const raw = await result.get();
-
-	// 		// only need to set this once
-	// 		if (!participant_count) participant_count = raw.length;
-	// 		const cleaned = remove_empties(raw);
-	// 		const transformed = transform(cleaned);
-
-	// 		return {
-	// 			field_name: id,
-	// 			data: transformed,
-	// 			completion_percentage:
-	// 				Math.round((cleaned.length / raw.length) * 10000) / 100
-	// 		};
-	// 	});
-	// 	const data = await Promise.all(tasks);
-	// 	let result = {};
-
-	// 	chart_ids.forEach((id, i) => {
-	// 		result[id] = data[i];
-	// 	});
-
-	// 	return {
-	// 		// @ts-expect-error
-	// 		body: {
-	// 			meta: {
-	// 				participant_count
-	// 			},
-	// 			data: result
-	// 		}
-	// 	};
-	// } catch (err) {
-	// 	console.error(err);
-	// 	return {
-	// 		status: 500
-	// 	};
-	// }
 }

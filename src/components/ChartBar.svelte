@@ -3,6 +3,7 @@
 	import { sort_helpers } from './chart-bar-utils';
 	import { session } from '$app/stores';
 	import { mode } from '~/ui.store';
+	import IconFilter from '~/components/IconFilter.svelte';
 
 	export let config;
 	export let filterable = false;
@@ -11,18 +12,32 @@
 	export let unit = 'question respondents';
 
 	let show_all = false;
+	let chart_filtered = false;
+	let field_filtered_ids = [];
 
 	$: field_name = config.field_name;
+	$: type = config.type;
 	$: data = config.data;
 	$: completion_percentage = config.completion_percentage;
 	$: sorter = sort_helpers[sort_type];
+
 	$: filter_applied = $session.filters?.length > 0 || false;
+	$: {
+		let f = $session.filters?.filter((f) => f.field_name === field_name) || [];
+		chart_filtered = f.length > 0;
+		field_filtered_ids = f.map(({ value }) => value);
+	}
+
 	$: display_data = Object.entries(data)
 		.sort(sorter($mode))
 		.filter((_, i) => (show_all ? true : i < limit));
 
 	const handle_filter = (value) => () => {
-		filter.add({ field_name, value });
+		if (field_filtered_ids.includes(value)) {
+			filter.remove({ field_name, value });
+		} else {
+			filter.add({ field_name, value });
+		}
 	};
 </script>
 
@@ -60,9 +75,20 @@
 					</div>
 				</div>
 				{#if filterable}
-					<button class="bar-filter" on:click={handle_filter(name)}
-						>Filter</button
+					<button
+						class="bar-filter"
+						on:click={handle_filter(name)}
+						disabled={!field_filtered_ids.includes(name) &&
+							type === 'single' &&
+							chart_filtered}
 					>
+						{#if field_filtered_ids.includes(name)}
+							&times;
+						{:else}
+							<IconFilter />
+						{/if}
+						<span>Filter</span>
+					</button>
 				{/if}
 			</li>
 		{/each}
@@ -132,7 +158,34 @@
 	}
 
 	.bar-filter {
-		padding: 0.5rem;
+		width: 4.25rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.25rem;
+		appearance: none;
+		padding: 0.25rem;
+		border-radius: 4px;
+		color: var(--color-midnight-100);
+		border: 1px solid var(--color-midnight-100);
+		background-color: transparent;
+	}
+
+	.bar-filter:hover {
+		color: var(--color-nav-highlight-bg);
+		border-color: var(--color-nav-highlight-fg);
+		background-color: var(--color-nav-highlight-fg);
+	}
+
+	.bar-filter[disabled] {
+		color: var(--color-midnight-80);
+		border-color: var(--color-midnight-60);
+		background-color: var(--color-midnight-40);
+	}
+	.bar-filter[disabled]:hover {
+		color: var(--color-midnight-80);
+		border-color: var(--color-midnight-60);
+		background-color: transparent;
 	}
 
 	.button-groups {
