@@ -23,7 +23,8 @@
 
 	$: filter_applied = $session.filters?.length > 0 || false;
 	$: {
-		let f = $session.filters?.filter((f) => f.field_name === field_name) || [];
+		let f =
+			$session.filters?.filter((f) => f.field_name === field_name) || [];
 		chart_filtered = f.length > 0;
 		field_filtered_ids = f.map(({ value }) => value);
 	}
