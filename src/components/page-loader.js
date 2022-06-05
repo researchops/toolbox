@@ -7,7 +7,7 @@ export const create_loader =
 		const res = await fetch('https://api.toolbox-uxr.workers.dev', {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
 				filters: session.filters || [],
