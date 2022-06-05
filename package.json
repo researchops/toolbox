@@ -6,6 +6,7 @@
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
+    "start": "VITE_PREVIEW=true svelte-kit build && svelte-kit preview",
     "prepare": "svelte-kit sync",
     "test": "playwright test",
     "test:module": "vitest",

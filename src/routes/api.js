@@ -35,11 +35,12 @@ export async function post({ request }) {
 	let dataset;
 	let participant_count;
 
-	const url = import.meta.env.CF_PAGES_URL;
 	if (mode === 'production') {
+		const url = import.meta.env.VITE_PREVIEW ? 'http://localhost:3000' : import.meta.env.CF_PAGES_URL;
 		dataset = await fetch(`${url}/data.json`).then((res) => res.json());
 	} else {
-		dataset = await import('~/data/data-loader').then((res) => res.default);
+		console.log('dev')
+		dataset = await import('../data/data-loader').then((res) => res.default);
 	}
 
 	const query_part_filters = filters
