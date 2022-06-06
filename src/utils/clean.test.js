@@ -1,4 +1,4 @@
-import { test } from 'vitest';
+import { expect, test } from 'vitest';
 import { clean } from './clean';
 
 const test_data = [
@@ -13,8 +13,8 @@ const test_data = [
 			'Finance and procurement',
 			'Vendor management and tools',
 			'Taxonomy',
-            null,
-            '',
+			null,
+			''
 		]
 	},
 	{
@@ -23,7 +23,7 @@ const test_data = [
 		responsibilities: [
 			'Training and mentoring',
 			'Vendor management and tools',
-			'Taxonomy'
+			'',
 		]
 	},
 	{
@@ -38,6 +38,16 @@ const test_data = [
 ];
 
 test('remove empties / undefined from single choice charts', () => {
-    const result = clean(test_data, 'experience');
-    console.log(result);
+	const result = clean(test_data, 'experience');
+	expect(result).toMatchSnapshot()
+});
+
+test('remove empties / undefined from multi-choice charts', () => {
+	const result = clean(test_data, 'responsibilities');
+	expect(result).toMatchSnapshot()
+});
+
+test('remove empties / undefined from multiple fields', () => {
+	const result = clean(test_data, 'expertise', 'experience');
+	expect(result).toMatchSnapshot()
 });

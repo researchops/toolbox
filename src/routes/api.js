@@ -1,30 +1,11 @@
 import query from '~/groq';
 import { chart_config, transform_map } from '~/chart_config';
 import { mode } from '$app/env';
+import { clean } from '~/utils/clean';
 
 function assemble_filter({ field_name, value }) {
 	const { type = 'multiple' } = chart_config[field_name] || {};
 	return `"${value}" ${type === 'single' ? '==' : 'in'}  ${field_name}`;
-}
-
-function remove_empties(data, ...field_names) {
-	return data.map((item) =>
-		field_names.reduce((acc, key) => {
-			const field_value = item[key];
-			let qualified = false;
-			if (Array.isArray(field_value)) {
-				qualified =
-					field_value.length > 0 &&
-					!field_value.every((item) => item.trim() === '');
-			} else {
-				qualified = field_value !== null;
-			}
-			if (qualified) {
-				acc[key] = field_value;
-			}
-			return acc;
-		}, {})
-	);
 }
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
@@ -36,11 +17,19 @@ export async function post({ request }) {
 	let participant_count;
 
 	if (mode === 'production') {
-		const url = import.meta.env.VITE_PREVIEW ? 'http://localhost:3000' : import.meta.env.CF_PAGES_URL;
-		dataset = await fetch(`${url}/data.json`).then((res) => res.json());
+		const url = import.meta.env.VITE_PREVIEW
+			? 'http://localhost:3000'
+			: import.meta.env.CF_PAGES_URL;
+		dataset = await fetch(`${url}/data.json`, {
+			cf: {
+				cacheTtl: 10800,
+				cacheEverything: true
+			}
+		}).then((res) => res.json());
 	} else {
-		console.log('dev')
-		dataset = await import('../data/data-loader').then((res) => res.default);
+		dataset = await import('../data/data-loader').then(
+			(res) => res.default
+		);
 	}
 
 	const query_part_filters = filters
@@ -74,13 +63,13 @@ export async function post({ request }) {
 				chart_config[id] || {};
 
 			const transform = transform_map[type];
-			const cleaned_filtered = remove_empties(filtered, ...field_names);
+			const cleaned_filtered = clean(filtered, ...field_names);
 			const transformed_filtered = transform(
 				cleaned_filtered,
 				...field_names
 			);
 
-			const cleaned_full = remove_empties(full, ...field_names);
+			const cleaned_full = clean(full, ...field_names);
 			const transformed_full = transform(cleaned_full, ...field_names);
 
 			let merged = {};
@@ -104,6 +93,7 @@ export async function post({ request }) {
 			}
 			data[id] = {
 				field_name: id,
+				type,
 				completion_percentage:
 					Math.round((cleaned_full.length / full.length) * 10000) /
 					100,
@@ -126,52 +116,4 @@ export async function post({ request }) {
 			status: 500
 		};
 	}
-
-	// try {
-	// 	const tasks = chart_ids.map(async (id) => {
-	// 		const { type = 'multiple', field_names = [id] } =
-	// 			chart_config[id] || {};
-	// 		const transform = transform_map[type];
-	// 		const result = await query(
-	// 			dataset,
-	// 			`*[${query_part_filters}] { ${field_names
-	// 				.map((field, i) => `"field_${i}": ${field}`)
-	// 				.join(',')} }`
-	// 		);
-	// 		const raw = await result.get();
-
-	// 		// only need to set this once
-	// 		if (!participant_count) participant_count = raw.length;
-	// 		const cleaned = remove_empties(raw);
-	// 		const transformed = transform(cleaned);
-
-	// 		return {
-	// 			field_name: id,
-	// 			data: transformed,
-	// 			completion_percentage:
-	// 				Math.round((cleaned.length / raw.length) * 10000) / 100
-	// 		};
-	// 	});
-	// 	const data = await Promise.all(tasks);
-	// 	let result = {};
-
-	// 	chart_ids.forEach((id, i) => {
-	// 		result[id] = data[i];
-	// 	});
-
-	// 	return {
-	// 		// @ts-expect-error
-	// 		body: {
-	// 			meta: {
-	// 				participant_count
-	// 			},
-	// 			data: result
-	// 		}
-	// 	};
-	// } catch (err) {
-	// 	console.error(err);
-	// 	return {
-	// 		status: 500
-	// 	};
-	// }
 }
