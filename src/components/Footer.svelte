@@ -6,7 +6,7 @@
 <footer>
     <p>
         &copy;{new Date().getFullYear()} by {title} <a href="https://researchops.community/">ResearchOps Communiity</a><br>
-        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC Attribution-Sharealike International Licence</a>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">Non-commercial ShareAlike 4.0 CC License</a>
     </p>
 </footer>
 
