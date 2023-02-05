@@ -5,7 +5,7 @@ theme: ocean
 
 <script context="module">
 	import { create_loader } from '~/components/page-loader'
-	export const load = create_loader(['participant_recruiting', 'participant_contacting', 'participant_tracking',  'informed_consent', 'participant_incentives', 'participant_relationship_mngt', 'intercept'])
+	export const load = create_loader(['participant_recruiting', 'participant_scheduling', 'participant_contacting', 'participant_tracking',  'informed_consent', 'participant_incentives', 'participant_relationship_mngt', 'intercept'])
 </script>
 
 <script>
@@ -69,7 +69,7 @@ Keeping track communication with participants.
 
 Scheduling research sessions.
 
-<!-- <ChartBar config={data.participant_scheduling} />  -->
+<ChartBar config={data.participant_scheduling} /> 
 
 ---
 
