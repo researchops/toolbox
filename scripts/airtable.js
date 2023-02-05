@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs/promises';
 import { fileURLToPath } from 'url';
-import { createRequire } from "module";
+import { createRequire } from 'module';
 
 import 'dotenv/config';
 import Airtable from 'airtable';
@@ -24,22 +24,22 @@ Airtable.configure({
 const client = Airtable.base(process.env.ATBL_BASE)(process.env.ATBL_SHEET);
 
 function swap_fields(fields, record) {
-	const new_field = {}
+	const new_field = {};
 	Object.entries(fields).forEach(([field_id, field_value]) => {
-		const value = record[field_value]
-		if (typeof value === 'undefined') return
-		new_field[field_id] = value
-	})
+		const value = record[field_value];
+		if (typeof value === 'undefined') return;
+		new_field[field_id] = value;
+	});
 
-	return new_field
+	return new_field;
 }
 
 function page(records, next) {
 	records.forEach((record) => {
 		const raw = record._rawJson.fields;
 		const swapped = swap_fields(fields, raw);
-        const id = record.id;
-		console.log(`pushed ${id}`)
+		const id = record.id;
+		console.log(`pushed ${id}`);
 		swapped.id = id;
 		data.push(swapped);
 	});
@@ -52,11 +52,9 @@ async function done(err) {
 		process.exit(1);
 	}
 
-    console.log(`fetched ${data.length} rows. Writing...`)
+	console.log(`fetched ${data.length} rows. Writing...`);
 	await fs.writeFile(file_data, JSON.stringify(data), 'utf-8');
 	console.log(`write ${data.length} rows to ${file_data}`);
 }
 
-client
-	.select()
-	.eachPage(page, done);
+client.select().eachPage(page, done);
