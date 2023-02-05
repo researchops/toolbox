@@ -20,11 +20,11 @@ export async function post({ request }) {
 		const url = import.meta.env.VITE_PREVIEW
 			? 'http://localhost:3000'
 			: import.meta.env.CF_PAGES_URL;
-		dataset = await fetch(`${url}/data.json`, {
-			cf: {
-				cacheTtl: 10800,
-				cacheEverything: true
-			}
+		dataset = await fetch(`${url}/data-20230206.json`, {
+			// cf: {
+			// 	cacheTtl: 10800,
+			// 	cacheEverything: true
+			// }
 		}).then((res) => res.json());
 	} else {
 		dataset = await import('../data/data-loader').then(
