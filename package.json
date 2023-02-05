@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "build:data": "node scripts/airtable.js",
+    "build:data": "node scripts/airtable.js && cp src/data/data.json static/data.json",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "start": "VITE_PREVIEW=true svelte-kit build && svelte-kit preview",
