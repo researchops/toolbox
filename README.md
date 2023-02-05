@@ -66,3 +66,19 @@ Descriptions and other editorial content in the app is stored in Markdown. The f
 10. Delete the branch.
 11. Wait till a scheduled release to publish the changes to production or request an off cycle release. 
 
+
+## How it works
+
+```
+[ Airtable ] -> [ Local build ] -> [ Github ] -> [ Cloudflare Pages ]
+```
+
+Data is synced manually by running `npm run build:data`. This does 2 things:
+- Run a script that pull data from airtable & prepare the data
+- Copy the data to the `/static` dir to make it available for the site
+
+| ⚠️ On Airtable, data is synced by field names and not field IDs.
+
+Once deployed on Cloudflare (CF), Svelte Kit creates an API endpoint in a CF worker. During build _and_ live, each static markdown page will query this endpoint with a list of 'config' that match a chart on that page. For example, a static markdown page could contains the following charts: `user-mapping`, `user-interviews`.
+
+In order to fetch these data, we'd need to pass the key `user-mapping` & `user-interviews` to the `create_loader` function on top the page.
